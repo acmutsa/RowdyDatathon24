@@ -60,7 +60,7 @@ export default {
     // facebook: "https://facebook.com/rowdydatathon",
     // twitter: "https://twitter.com/rowdydatathon",
     github: "https://github.com/acmutsa",
-    // guide: "https://go.rowdydatathon.org/discord",
+    guide: "https://go.rowdydatathon.org/guide",
   },
   icon: {
     sm: "/img/logo/hackkit.svg",
@@ -93,8 +93,8 @@ export default {
     Other: "#795548",
   },
   days: {
-    Saturday: new Date(2024, 10, 5),
-    Sunday: new Date(2023, 6, 16),
+    Saturday: new Date(2024, 9, 5),
+    Sunday: new Date(2023, 9, 6),
   },
   maxResumeSizeInBytes: 4194304,
   maxProfilePhotoSizeInBytes: 3145728,
@@ -102,7 +102,7 @@ export default {
   eventPassBgImage: "/img/dash/pass/bg.png",
   noResumeProvidedURL: "https://static.acmutsa.org/No%20Resume%20Provided.pdf",
   // Come in and change this date to whenever the hackathon starts
-  startDate: new Date(new Date(2024, 1, 24).setHours(9)),
+  startDate: new Date(new Date(2024, 9, 5).setHours(9)),
   prettyLocation: "UTSA San Pedro I, San Antonio, TX",
   roleBadges: {
     hacker: {
@@ -143,6 +143,11 @@ export default {
     },
   },
   maxTeamSize: 4,
+  featureFlags: {
+		core: {
+			requireUsersApproval: false,
+		},
+	},
 } as const;
 
 // Its important that this is kept in sync with the database schema.
