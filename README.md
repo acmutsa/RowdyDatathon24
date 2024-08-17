@@ -29,4 +29,4 @@ Want to help make Rowdy Datathon the best Hackathon around? Please reach out to 
 <img src="https://contrib.rocks/image?repo=acmutsa/RowdyDatathon24" />
 </a>
   
-[📣❤️ Other Contributions ❤️📣](https://github.com/UTSA-ACM/RowdyDatathon/blob/dev/contributions.md)
+[📣❤️ Other Contributions ❤️📣](https://github.com/acmutsa/RowdyDatathon/blob/dev/contributions.md)
