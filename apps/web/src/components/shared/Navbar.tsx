@@ -5,11 +5,12 @@ import { Button } from "../shadcn/ui/button";
 import ProfileButton from "./ProfileButton";
 import { auth, currentUser } from "@clerk/nextjs";
 import NavBarLinksGrouper from "./NavBarLinksGrouper";
-import { Oswald } from "next/font/google";
+import { Berkshire_Swash } from "next/font/google";
 import { cn } from "@/lib/utils/client/cn";
 
-const oswald = Oswald({
-	variable: "--font-oswald",
+const berkshire = Berkshire_Swash({
+	weight: "400",
+	variable: "--font-berkshire",
 	subsets: ["latin"],
 });
 
@@ -23,7 +24,7 @@ export default async function Navbar({ className }: NavbarProps) {
 		<div className="z-50 w-screen">
 			<div
 				className={cn(
-					`relative top-0 z-50 h-16 w-screen border-b border-b-border bg-nav ${oswald.variable}`,
+					`relative top-0 z-50 h-16 w-screen border-b border-b-border bg-nav ${berkshire.variable}`,
 					className,
 				)}
 			>
@@ -40,7 +41,7 @@ export default async function Navbar({ className }: NavbarProps) {
 								height={32}
 							/>
 							{/* <div className="bg-muted-foreground h-[45%] rotate-[25deg] w-[2px]" /> */}
-							<h2 className="font-oswald text-lg font-bold text-[#A7866A] dark:text-[#FEF2E6]">
+							<h2 className={`${berkshire.className} text-lg font-bold text-[#3186AF] dark:text-[#49D6F9]`}>
 								{c.hackathonName}
 							</h2>
 						</Link>

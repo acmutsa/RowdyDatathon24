@@ -20,7 +20,7 @@ export default {
     "Dairy",
     "Eggs",
     "Halal",
-  ],
+  ], 
   groups: {
     "Guild A | Group A": {
       discordRole: "Guild A Role",
@@ -63,10 +63,10 @@ export default {
     guide: "https://go.rowdydatathon.org/guide",
   },
   icon: {
-    sm: "/img/logo/hackkit.svg",
-    md: "/img/logo/hackkit-md.png",
-    lg: "/img/logo/hackkit-lg.png",
-    svg: "/img/logo/hackkit.svg",
+    sm: "/img/logo/rd-logo-md.png",
+    md: "/img/logo/rd-logo-md",
+    lg: "/img/logo/rd-logo-lg.png",
+    svg: "/img/logo/rd-logo.svg",
   },
   dashPaths: {
     dash: {

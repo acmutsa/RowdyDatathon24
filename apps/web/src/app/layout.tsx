@@ -3,6 +3,11 @@ import { ClerkProvider } from "@clerk/nextjs";
 import { cookies } from "next/headers";
 import { Analytics } from "@vercel/analytics/react";
 import { defaultTheme } from "config";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+	title: 'Rowdy Datathon 2024'
+}
 
 export default function RootLayout({
 	children,
