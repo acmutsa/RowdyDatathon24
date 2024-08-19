@@ -80,6 +80,8 @@ module.exports = {
 			},
 			fontFamily: {
 				oswald: ["var(--font-oswald)"],
+				berkshire: ["var(--font-berkshire)"],
+				roca: ["var(--font-roca)"],
 			},
 		},
 	},

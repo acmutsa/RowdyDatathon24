@@ -102,7 +102,6 @@ export async function POST(req: Request) {
 
 		await tx.insert(registrationData).values({
 			clerkID: user.id,
-			acceptedMLHCodeOfConduct: body.acceptsMLHCodeOfConduct,
 			accommodationNote: body.accommodationNote || null,
 			age: body.age,
 			dietRestrictions: body.dietaryRestrictions,
@@ -113,12 +112,10 @@ export async function POST(req: Request) {
 			levelOfStudy: body.levelOfStudy,
 			major: body.major,
 			race: body.race,
-			sharedDataWithMLH: body.shareDataWithMLH,
 			shirtSize: body.shirtSize,
 			shortID: body.shortID,
 			softwareExperience: body.softwareBuildingExperience,
 			university: body.university,
-			wantsToReceiveMLHEmails: body.wantsToReceiveMLHEmails,
 			GitHub: body.github,
 			LinkedIn: body.linkedin,
 			PersonalWebsite: body.personalWebsite,

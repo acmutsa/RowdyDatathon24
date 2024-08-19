@@ -68,10 +68,6 @@ export default function RegisterForm({ defaultEmail }: RegisterFormProps) {
 			dietaryRestrictions: [],
 			profileIsSearchable: true,
 			bio: "",
-			wantsToReceiveMLHEmails: false,
-			// The rest of these are default values to prevent the controller / uncontrolled input warning from React
-			acceptsMLHCodeOfConduct: false,
-			shareDataWithMLH: false,
 			accommodationNote: "",
 			firstName: "",
 			lastName: "",
@@ -121,20 +117,10 @@ export default function RegisterForm({ defaultEmail }: RegisterFormProps) {
 			);
 		}
 
-		if (
-			data.acceptsMLHCodeOfConduct !== true ||
-			data.shareDataWithMLH !== true
-		) {
-			setIsLoading(false);
-			return alert(
-				"You must accept the MLH Code of Conduct and Privacy Policy to continue.",
-			);
-		}
-
 		let resume: string = c.noResumeProvidedURL;
 
 		if (uploadedFile) {
-			const fileLocation = `${c.hackathonName}/resume/${uploadedFile.name}`;
+			const fileLocation = `${c.hackathonName} ${c.itteration}/resume/${uploadedFile.name}`;
 			const newBlob = await put(fileLocation, uploadedFile, {
 				access: "public",
 				handleBlobUploadUrl: "/api/upload/resume/register",
@@ -388,111 +374,7 @@ export default function RegisterForm({ defaultEmail }: RegisterFormProps) {
 							/>
 						</div>
 					</FormGroupWrapper>
-					<FormGroupWrapper title="MLH">
-						<FormField
-							control={form.control}
-							name="acceptsMLHCodeOfConduct"
-							render={({ field }) => (
-								<FormItem className="flex flex-row items-start space-x-3 space-y-0 rounded-md border p-4">
-									<FormControl>
-										<Checkbox
-											checked={field.value}
-											onCheckedChange={field.onChange}
-										/>
-									</FormControl>
-									<div className="space-y-1 leading-none">
-										<FormLabel>
-											I accept the{" "}
-											<Link
-												target="_blank"
-												className="underline"
-												href={
-													"https://mlh.io/code-of-conduct"
-												}
-											>
-												MLH Code of Conduct
-											</Link>
-										</FormLabel>
-										<FormDescription>
-											This is required of all attendees.
-										</FormDescription>
-									</div>
-								</FormItem>
-							)}
-						/>
-						<FormField
-							control={form.control}
-							name="shareDataWithMLH"
-							render={({ field }) => (
-								<FormItem className="flex flex-row items-start space-x-3 space-y-0 rounded-md border p-4">
-									<FormControl>
-										<Checkbox
-											checked={field.value}
-											onCheckedChange={field.onChange}
-										/>
-									</FormControl>
-									<div className="space-y-1 leading-none">
-										<FormLabel>
-											I authorize you to share my
-											application/registration information
-											with Major League Hacking for event
-											administration, ranking, and MLH
-											administration in-line with the MLH
-											Privacy Policy. I further agree to
-											the terms of both the{" "}
-											<Link
-												target="_blank"
-												className="underline"
-												href={
-													"https://github.com/MLH/mlh-policies/blob/main/contest-terms.md"
-												}
-											>
-												MLH Contest Terms and Conditions
-											</Link>{" "}
-											and the{" "}
-											<Link
-												target="_blank"
-												className="underline"
-												href={"https://mlh.io/privacy"}
-											>
-												MLH Privacy Policy
-											</Link>
-											.
-										</FormLabel>
-										<FormDescription>
-											This is required of all attendees.
-										</FormDescription>
-									</div>
-								</FormItem>
-							)}
-						/>
-						<FormField
-							control={form.control}
-							name="wantsToReceiveMLHEmails"
-							render={({ field }) => (
-								<FormItem className="flex flex-row items-start space-x-3 space-y-0 rounded-md border p-4">
-									<FormControl>
-										<Checkbox
-											checked={field.value}
-											onCheckedChange={field.onChange}
-										/>
-									</FormControl>
-									<div className="space-y-1 leading-none">
-										<FormLabel>
-											I authorize MLH to send me an email
-											where I can further opt into the MLH
-											Hacker, Events, or Organizer
-											Newsletters and other communications
-											from MLH.
-										</FormLabel>
-										<FormDescription>
-											This is optional.
-										</FormDescription>
-									</div>
-								</FormItem>
-							)}
-						/>
-					</FormGroupWrapper>
+
 					<FormGroupWrapper title="University Info">
 						<div
 							className={`grid ${
