@@ -1,54 +1,46 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
+import { Berkshire_Swash } from "next/font/google";
+import ReactCurvedText from "react-curved-text";
 import { Button } from "../shadcn/ui/button";
+
+const berkshire = Berkshire_Swash({
+	weight: "400",
+	variable: "--font-berkshire",
+	subsets: ["latin"],
+});
 
 export default function Hero() {
 	return (
-		<section className="grid w-full grid-cols-1 overflow-hidden">
-			<div className="relative flex min-h-screen w-full flex-col items-center justify-center">
-				<div className="absolute left-[20%] top-[-30vh] h-[110vh] w-[225px] -translate-x-5 -rotate-[50deg] bg-white opacity-20 blur-3xl"></div>
-				<div className="relative">
-					<div className="absolute h-full w-full rounded-3xl bg-hackathon opacity-10 blur-3xl"></div>
-					<div className="z-10 grid h-min grid-cols-2">
-						<div className="relative">
-							<Image
-								src="/img/logo/hackkit-md.png"
-								alt="HackKit Logo"
-								fill
-								className="object-contain"
-							/>
-						</div>
-						<div className="z-10 flex py-5">
-							<h1 className="text-7xl font-black text-hackathon dark:bg-gradient-to-tl dark:from-hackathon/80 dark:to-white dark:bg-clip-text dark:text-transparent md:text-8xl">
-								Hack
-								<br />
-								Kit
-							</h1>
-						</div>
-					</div>
-					<p className="text-md pl-5 pt-10 text-center font-bold text-muted-foreground">
-						Feature-packed Hackathon managment software{" "}
-						<u>that just works</u>.
-					</p>
+		<section className="wild-gradient h-screen w-full">
+			<div className="flex h-full w-full flex-col items-center">
+				<div className="text-center">
+					<h1 className={`text-8xl ${berkshire.className} mt-32`}>
+						<ReactCurvedText
+							text="Rowdy Datathon"
+							width={750}
+							height={225}
+							cx={750 / 2}
+							cy={350}
+							rx={1000 / 2.5}
+							ry={250}
+							startOffset={160}
+							reversed={true}
+							textProps={{
+								style: {
+									// textAnchor: "middle",
+								},
+							}}
+							// svgProps={{ className: "curved-title" }}
+						/>
+					</h1>
+					<h2 className="font-roca mx-auto w-fit rounded-full bg-black/10 p-1 text-2xl">
+						OCTOBER 5-6 @ UT SAN ANTONIO
+					</h2>
 				</div>
 			</div>
-			<div className="absolute top-[80vh] flex w-full flex-wrap items-center justify-center gap-x-2 gap-y-4">
-				<Link href={"https://github.com/acmutsa/hackkit"}>
-					<Button variant={"outline"} size={"lg"}>
-						GitHub
-					</Button>
-				</Link>
-				<Link href={"https://github.com/acmutsa/hackkit"}>
-					<Button variant={"outline"} size={"lg"}>
-						Docs
-					</Button>
-				</Link>
-				<Link href={"https://github.com/acmutsa/hackkit"}>
-					<Button variant={"outline"} size={"lg"}>
-						Channel Log
-					</Button>
-				</Link>
-				<div className="h-0 basis-full" />
+			<div className="absolute top-[85dvh] flex w-full flex-wrap items-center justify-center gap-x-2 gap-y-4">
 				<div className="max-h-[50px] overflow-hidden">
 					<Link
 						href={

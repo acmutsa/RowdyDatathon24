@@ -18,21 +18,21 @@ const berkshire = Berkshire_Swash({
 
 const oswald = Oswald({
 	variable: "--font-oswald",
-	subsets: ["latin"]
-})
+	subsets: ["latin"],
+});
 
 export default function Home() {
 	return (
-		<div className={`${oswald.className} w-full overflow-x-hidden`}>
+		<div className={`${oswald.className} w-full overflow-hidden`}>
 			<Navbar />
 			{/* <MLHBadge /> */}
-			<main className="overflow-x-hidden">
+			<main className="overflow-hidden">
 				<Hero />
 
-				<About />
+				{/* <About />
 				<Partners />
 				<WorkWithUs />
-				<Footer />
+				<Footer /> */}
 			</main>
 		</div>
 	);

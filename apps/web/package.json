@@ -73,6 +73,7 @@
     "react-aria": "^3.33.1",
     "react-bootstrap": "^2.10.4",
     "react-confetti": "^6.1.0",
+    "react-curved-text": "^3.0.1",
     "react-dom": "18.3.1",
     "react-dropzone": "^14.2.3",
     "react-email": "^2.1.5",

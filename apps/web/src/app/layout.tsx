@@ -6,8 +6,8 @@ import { defaultTheme } from "config";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-	title: 'Rowdy Datathon 2024'
-}
+	title: "Rowdy Datathon 2024",
+};
 
 export default function RootLayout({
 	children,
