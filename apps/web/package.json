@@ -99,6 +99,7 @@
     "zod": "^3.23.8"
   },
   "devDependencies": {
+    "@types/react-curved-text": "^2.0.3",
     "esbuild-register": "^3.5.0"
   }
 }
