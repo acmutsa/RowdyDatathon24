@@ -80,14 +80,6 @@ export async function POST(req: Request) {
 		.select({ count: sql<number>`count(*)`.mapWith(Number) })
 		.from(users);
 
-	if (!body.acceptsMLHCodeOfConduct || !body.shareDataWithMLH) {
-		return NextResponse.json({
-			success: false,
-			message:
-				"You must accept the MLH Code of Conduct and Privacy Policy.",
-		});
-	}
-
 	await db.transaction(async (tx) => {
 		await tx.insert(users).values({
 			clerkID: user.id,
