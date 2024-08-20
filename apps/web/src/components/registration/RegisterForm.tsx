@@ -101,7 +101,9 @@ export default function RegisterForm({ defaultEmail }: RegisterFormProps) {
 	const bioValue = form.watch("bio");
 
 	useEffect(() => {
-		if (universityValue != c.localUniversityName.toLowerCase()) {
+		if (
+			universityValue.toLowerCase() != c.localUniversityName.toLowerCase()
+		) {
 			form.setValue("shortID", "NOT_LOCAL_SCHOOL");
 		} else {
 			form.setValue("shortID", "");
@@ -134,6 +136,8 @@ export default function RegisterForm({ defaultEmail }: RegisterFormProps) {
 			vRes: BasicServerValidator,
 		});
 
+		console.log(res);
+
 		if (res.success) {
 			if (res.data.success) {
 				alert(
@@ -154,6 +158,7 @@ export default function RegisterForm({ defaultEmail }: RegisterFormProps) {
 			}
 		} else {
 			setIsLoading(false);
+			console.log(res.error);
 			return console.log(
 				`Recieved a unexpected response from the server. Please try again. If this is a continuing issue, please reach out to us at ${c.issueEmail}.`,
 			);
@@ -378,7 +383,7 @@ export default function RegisterForm({ defaultEmail }: RegisterFormProps) {
 					<FormGroupWrapper title="University Info">
 						<div
 							className={`grid ${
-								universityValue ===
+								universityValue.toLowerCase() ===
 								c.localUniversityName.toLowerCase()
 									? "grid-cols-1 md:grid-cols-6"
 									: "grid-cols-1 md:grid-cols-5"
@@ -586,7 +591,7 @@ export default function RegisterForm({ defaultEmail }: RegisterFormProps) {
 								render={({ field }) => (
 									<FormItem
 										className={`${
-											universityValue ===
+											universityValue.toLowerCase() ===
 											c.localUniversityName.toLowerCase()
 												? "col-span-2 flex flex-col md:col-span-1"
 												: "hidden"
