@@ -13,32 +13,33 @@ const berkshire = Berkshire_Swash({
 
 export default function Hero() {
 	return (
-		<section className="wild-gradient h-screen w-full">
-			<div className="flex h-full w-full flex-col items-center">
-				<div className="text-center">
-					<h1 className={`text-8xl ${berkshire.className} mt-32`}>
-						<ReactCurvedText
-							text="Rowdy Datathon"
-							width={750}
-							height={225}
-							cx={750 / 2}
-							cy={350}
-							rx={1000 / 2.5}
-							ry={250}
-							startOffset={160}
-							reversed={true}
-							textProps={{
-								style: {
-									// textAnchor: "middle",
-								},
-							}}
-							// svgProps={{ className: "curved-title" }}
-						/>
-					</h1>
-					<h2 className="font-roca mx-auto w-fit rounded-full bg-black/10 p-1 text-2xl">
+		<section className="hero-section relative -z-10 h-screen w-full">
+			{/* <Image
+				src="/design/trees_bg.svg"
+				width={100}
+				height={100}
+				alt="Trees"
+				className="absolute bottom-0 -z-10 w-full"
+			></Image> */}
+			<div className="z-10 flex h-full w-full flex-col items-center">
+				<div className="mt-32 w-full text-center">
+					<Image
+						src={"/design/datathon_title.svg"}
+						width={750}
+						height={32}
+						alt="Rowdy Datathon"
+						className="mx-auto h-auto w-3/4"
+					></Image>
+					<h2 className="font-roca z-10 mx-auto w-fit rounded-full bg-black/10 p-1 text-2xl">
 						OCTOBER 5-6 @ UT SAN ANTONIO
 					</h2>
 				</div>
+				<Link
+					href="/sign-up"
+					className="bg-forest-green z-10 mt-16 rounded-full p-2"
+				>
+					<h4>Click Here To Register!</h4>
+				</Link>
 			</div>
 			<div className="absolute top-[85dvh] flex w-full flex-wrap items-center justify-center gap-x-2 gap-y-4">
 				<div className="max-h-[50px] overflow-hidden">

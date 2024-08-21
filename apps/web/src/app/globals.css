@@ -46,6 +46,9 @@
 		--gradient-color-2: #3366ff;
 		--gradient-color-3: #002db3;
 		--gradient-color-4: #1952cc;
+
+		--forest-green: 77, 21%, 37%;
+		--pixy-blue: 192, 94%, 63%;
 	}
 
 	.dark {
@@ -113,6 +116,12 @@
 .wild-gradient {
 	background: linear-gradient(135deg, #f7ff0a, #a8f33f, #59e063, #00ca7f, #00b091, #009697, #007b8f, #0a607b);
 	/* made at https://learnui.design/tools/gradient-generator.html */
+}
+
+.hero-section {
+	background-image: url("/design/datathon_bg_full.svg");
+	background-position: center;
+	background-size: cover
 }
 
 svg.curved-title {
