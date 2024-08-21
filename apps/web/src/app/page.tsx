@@ -23,7 +23,7 @@ const oswald = Oswald({
 
 export default function Home() {
 	return (
-		<div className={`${oswald.className} w-full overflow-hidden`}>
+		<div className={`${oswald.className} overflow-hidden`}>
 			<Navbar />
 			{/* <MLHBadge /> */}
 			<main className="overflow-hidden">

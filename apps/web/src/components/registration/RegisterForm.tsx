@@ -79,6 +79,7 @@ export default function RegisterForm({ defaultEmail }: RegisterFormProps) {
 			hackerTag: "",
 			heardAboutEvent: "" as any,
 			levelOfStudy: "" as any,
+			softwareBuildingExperience: "Beginner",
 			linkedin: "",
 			personalWebsite: "",
 			profileDiscordName: "",
@@ -205,7 +206,7 @@ export default function RegisterForm({ defaultEmail }: RegisterFormProps) {
 								name="firstName"
 								render={({ field }) => (
 									<FormItem>
-										<FormLabel>First Name</FormLabel>
+										<FormLabel>First Name*</FormLabel>
 										<FormControl>
 											<Input
 												placeholder="Some"
@@ -221,7 +222,7 @@ export default function RegisterForm({ defaultEmail }: RegisterFormProps) {
 								name="lastName"
 								render={({ field }) => (
 									<FormItem>
-										<FormLabel>Last Name</FormLabel>
+										<FormLabel>Last Name*</FormLabel>
 										<FormControl>
 											<Input
 												placeholder="One"
@@ -237,7 +238,7 @@ export default function RegisterForm({ defaultEmail }: RegisterFormProps) {
 								name="email"
 								render={({ field }) => (
 									<FormItem>
-										<FormLabel>Email</FormLabel>
+										<FormLabel>Email*</FormLabel>
 										<FormControl>
 											<Input
 												readOnly={
@@ -257,7 +258,7 @@ export default function RegisterForm({ defaultEmail }: RegisterFormProps) {
 								name="age"
 								render={({ field }) => (
 									<FormItem>
-										<FormLabel>Age</FormLabel>
+										<FormLabel>Age*</FormLabel>
 										<FormControl>
 											<Input type="number" {...field} />
 										</FormControl>
@@ -270,7 +271,7 @@ export default function RegisterForm({ defaultEmail }: RegisterFormProps) {
 								name="gender"
 								render={({ field }) => (
 									<FormItem className="col-span-2">
-										<FormLabel>Gender</FormLabel>
+										<FormLabel>Gender*</FormLabel>
 										<Select
 											onValueChange={field.onChange}
 											defaultValue={field.value}
@@ -309,7 +310,7 @@ export default function RegisterForm({ defaultEmail }: RegisterFormProps) {
 								name="race"
 								render={({ field }) => (
 									<FormItem className="col-span-2">
-										<FormLabel>Race</FormLabel>
+										<FormLabel>Race*</FormLabel>
 										<Select
 											onValueChange={field.onChange}
 											defaultValue={field.value}
@@ -352,7 +353,7 @@ export default function RegisterForm({ defaultEmail }: RegisterFormProps) {
 								name="ethnicity"
 								render={({ field }) => (
 									<FormItem className="col-span-2">
-										<FormLabel>Ethnicity</FormLabel>
+										<FormLabel>Ethnicity*</FormLabel>
 										<Select
 											onValueChange={field.onChange}
 											defaultValue={field.value}
@@ -394,7 +395,7 @@ export default function RegisterForm({ defaultEmail }: RegisterFormProps) {
 								name="university"
 								render={({ field }) => (
 									<FormItem className="col-span-2 flex flex-col">
-										<FormLabel>University</FormLabel>
+										<FormLabel>University*</FormLabel>
 										<Popover>
 											<PopoverTrigger asChild>
 												<FormControl>
@@ -471,7 +472,7 @@ export default function RegisterForm({ defaultEmail }: RegisterFormProps) {
 								name="major"
 								render={({ field }) => (
 									<FormItem className="col-span-2 flex flex-col">
-										<FormLabel>Major</FormLabel>
+										<FormLabel>Major*</FormLabel>
 										<Popover>
 											<PopoverTrigger asChild>
 												<FormControl>
@@ -548,7 +549,7 @@ export default function RegisterForm({ defaultEmail }: RegisterFormProps) {
 								name="levelOfStudy"
 								render={({ field }) => (
 									<FormItem className="col-span-2 flex flex-col md:col-span-1">
-										<FormLabel>Level of Study</FormLabel>
+										<FormLabel>Level of Study*</FormLabel>
 										<Select
 											onValueChange={field.onChange}
 											defaultValue={field.value}
@@ -598,7 +599,7 @@ export default function RegisterForm({ defaultEmail }: RegisterFormProps) {
 										}`}
 									>
 										<FormLabel>
-											{c.localUniversityShortIDName}
+											{c.localUniversityShortIDName}*
 										</FormLabel>
 										<FormControl>
 											<Input
@@ -723,7 +724,7 @@ export default function RegisterForm({ defaultEmail }: RegisterFormProps) {
 								name="shirtSize"
 								render={({ field }) => (
 									<FormItem>
-										<FormLabel>Shirt Size</FormLabel>
+										<FormLabel>Shirt Size*</FormLabel>
 										<Select
 											onValueChange={field.onChange}
 											defaultValue={field.value}
@@ -948,7 +949,7 @@ export default function RegisterForm({ defaultEmail }: RegisterFormProps) {
 								name="hackerTag"
 								render={({ field }) => (
 									<FormItem>
-										<FormLabel>HackerTag</FormLabel>
+										<FormLabel>HackerTag*</FormLabel>
 										<FormControl>
 											<div className="flex">
 												<div className="flex h-10 w-10 items-center justify-center rounded-l bg-accent text-lg font-light text-primary">
@@ -970,7 +971,7 @@ export default function RegisterForm({ defaultEmail }: RegisterFormProps) {
 								name="profileDiscordName"
 								render={({ field }) => (
 									<FormItem>
-										<FormLabel>Discord Username</FormLabel>
+										<FormLabel>Discord Username*</FormLabel>
 										<FormControl>
 											<Input
 												placeholder={`${c.hackathonName.toLowerCase()} or ${c.hackathonName.toLowerCase()}#1234`}
@@ -986,7 +987,7 @@ export default function RegisterForm({ defaultEmail }: RegisterFormProps) {
 								name="pronouns"
 								render={({ field }) => (
 									<FormItem>
-										<FormLabel>Pronouns</FormLabel>
+										<FormLabel>Pronouns*</FormLabel>
 										<FormControl>
 											<Input {...field} />
 										</FormControl>
@@ -1001,7 +1002,7 @@ export default function RegisterForm({ defaultEmail }: RegisterFormProps) {
 								name="bio"
 								render={({ field }) => (
 									<FormItem>
-										<FormLabel>Bio</FormLabel>
+										<FormLabel>Bio*</FormLabel>
 										<FormControl>
 											<Textarea
 												placeholder="Hello! I'm..."
@@ -1031,7 +1032,7 @@ export default function RegisterForm({ defaultEmail }: RegisterFormProps) {
 								render={({ field }) => (
 									<FormItem className="flex flex-col items-start">
 										<FormLabel className="pb-2 text-left">
-											Skills
+											Skills*
 										</FormLabel>
 										<FormControl className="min-h-[80px]">
 											<TagInput

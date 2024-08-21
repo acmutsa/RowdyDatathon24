@@ -23,6 +23,8 @@ module.exports = {
 					"radial-gradient(ellipse_at_center, var(--gradient-color-stops))",
 			},
 			colors: {
+				"forest-green": "hsl(var(--forest-green))",
+				"pixy-blue": "hsl(var(pixy-blue))",
 				border: "hsl(var(--border))",
 				input: "hsl(var(--input))",
 				ring: "hsl(var(--ring))",

@@ -127,7 +127,7 @@ export default async function ProfileButton() {
 				>
 					<Avatar className="h-8 w-8">
 						<AvatarImage
-							src={user.profileData.profilePhoto}
+							src={user.profileData?.profilePhoto}
 							alt="@shadcn"
 						/>
 						<AvatarFallback>

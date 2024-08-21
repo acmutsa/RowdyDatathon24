@@ -94,6 +94,7 @@ export const RegisterFormValidator = z.object({
 	]),
 	heardAboutEvent: z
 		.union([
+			z.literal(""),
 			z.literal("Instagram"),
 			z.literal("Class Presentation"),
 			z.literal("Twitter"),
@@ -144,7 +145,6 @@ export const RegisterFormValidator = z.object({
 	pronouns: z.string().min(1).max(15),
 	bio: z
 		.string()
-		.min(1)
 		.max(500, { message: "Bio must be less than 500 characters." })
 		.refine(noProfanityValidator, noProfanityMessage),
 	skills: z.array(
