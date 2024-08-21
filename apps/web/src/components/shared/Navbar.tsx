@@ -41,7 +41,9 @@ export default async function Navbar({ className }: NavbarProps) {
 								height={32}
 							/>
 							{/* <div className="bg-muted-foreground h-[45%] rotate-[25deg] w-[2px]" /> */}
-							<h2 className={`${berkshire.className} text-lg font-bold text-[#3186AF] dark:text-[#49D6F9]`}>
+							<h2
+								className={`${berkshire.className} text-lg font-bold text-[#3186AF] dark:text-[#49D6F9]`}
+							>
 								{c.hackathonName}
 							</h2>
 						</Link>
@@ -83,7 +85,7 @@ export default async function Navbar({ className }: NavbarProps) {
 											Sign In
 										</Button>
 									</Link>
-									<Link href={"/register"}>
+									<Link href={"/sign-up"}>
 										<Button>Register</Button>
 									</Link>
 								</>
