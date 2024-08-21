@@ -13,14 +13,7 @@ const berkshire = Berkshire_Swash({
 
 export default function Hero() {
 	return (
-		<section className="hero-section relative -z-10 h-screen w-full">
-			{/* <Image
-				src="/design/trees_bg.svg"
-				width={100}
-				height={100}
-				alt="Trees"
-				className="absolute bottom-0 -z-10 w-full"
-			></Image> */}
+		<section className="hero-section relative z-0 h-screen w-full">
 			<div className="z-10 flex h-full w-full flex-col items-center">
 				<div className="mt-32 w-full text-center">
 					<Image
@@ -36,12 +29,12 @@ export default function Hero() {
 				</div>
 				<Link
 					href="/sign-up"
-					className="bg-forest-green z-10 mt-16 rounded-full p-2"
+					className="bg-forest-green z-20 mt-16 rounded-full p-2"
 				>
 					<h4>Click Here To Register!</h4>
 				</Link>
 			</div>
-			<div className="absolute top-[85dvh] flex w-full flex-wrap items-center justify-center gap-x-2 gap-y-4">
+			{/* <div className="absolute top-[85dvh] flex w-full flex-wrap items-center justify-center gap-x-2 gap-y-4">
 				<div className="max-h-[50px] overflow-hidden">
 					<Link
 						href={
@@ -55,6 +48,18 @@ export default function Hero() {
 						/>
 					</Link>
 				</div>
+			</div> */}
+			<div className="fixed bottom-0 left-0 p-8 text-center hover:scale-125">
+				<Link href="https://2023.rowdydatathon.org" className="z-20">
+					<Image
+						src="/design/rd23_ghost.svg"
+						width={64}
+						height={64}
+						className="hover:drop-shadow-white mx-auto hover:drop-shadow-lg"
+						alt="Cowboy ghost from Rowdy Datathon 2023"
+					></Image>
+					<h5>Previous year</h5>
+				</Link>
 			</div>
 		</section>
 	);
