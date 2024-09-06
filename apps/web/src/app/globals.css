@@ -134,7 +134,8 @@
 
 .bg-about {
 	background-image: url("/design/green_arch.svg");
-	background-size: cover;
+	background-position: center;
+	background-size: auto;
 	background-repeat: no-repeat;
 }
 
