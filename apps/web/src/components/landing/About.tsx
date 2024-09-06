@@ -13,10 +13,10 @@ export default function About() {
 	};
 	return (
 		<section
-			className="flex min-h-screen w-full items-center justify-center border-y-2 border-muted-foreground"
+			className="bg-forest-ground flex min-h-screen w-full items-center justify-center"
 			id="About"
 		>
-			<div className="flex w-full flex-col items-center justify-center">
+			<div className="bg-about flex w-full flex-col items-center justify-center">
 				<h1 className="text-center text-4xl font-black md:text-5xl">
 					About Section
 				</h1>

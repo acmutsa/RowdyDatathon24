@@ -29,8 +29,8 @@ export default function Home() {
 			<main className="overflow-hidden">
 				<Hero />
 
-				{/* <About />
-				<Partners />
+				<About />
+				{/* <Partners />
 				<WorkWithUs />
 				<Footer /> */}
 			</main>

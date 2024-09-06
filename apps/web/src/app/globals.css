@@ -49,6 +49,7 @@
 
 		--forest-green: 77, 21%, 37%;
 		--pixy-blue: 192, 94%, 63%;
+		--woody: 38, 68%, 16%;
 	}
 
 	.dark {
@@ -119,16 +120,29 @@
 }
 
 .hero-section {
-	background-image: url("/design/datathon_bg_full.svg");
+	/* background-image: url("/design/datathon_bg_full.svg");
 	background-position: center;
-	background-size: cover
+	background-size: cover */
+	background-color: #8CA193;
 }
 
-svg.curved-title {
+.bg-forest-ground {
+	background-image: url("/design/grass_full.svg");
+	background-size: contain;
+	background-repeat: repeat-y;
+}
+
+.bg-about {
+	background-image: url("/design/green_arch.svg");
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+/* svg.curved-title {
 	transform: rotate(0);
 }
 
 svg.curved-title text {
 	text-anchor: middle;
 	fill: var(--foreground);
-}
+} */
