@@ -135,8 +135,9 @@
 .bg-about {
 	background-image: url("/design/green_arch.svg");
 	background-position: center;
-	background-size: auto;
+	background-size: cover;
 	background-repeat: no-repeat;
+	aspect-ratio: 579.8 / 961;
 }
 
 /* svg.curved-title {

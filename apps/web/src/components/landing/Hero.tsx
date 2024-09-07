@@ -19,7 +19,7 @@ export default function Hero() {
 				alt="Forest"
 				width={0}
 				height={0}
-				className="absolute -top-1/2 left-1/2 z-20 w-[200dvh] -translate-x-1/2"
+				className="absolute -top-1/2 left-1/2 z-10 w-[200dvh] -translate-x-1/2"
 			></Image>
 			<div className="z-50 flex h-full w-full flex-col items-center">
 				<div className="z-50 mt-32 w-full text-center">
@@ -31,7 +31,7 @@ export default function Hero() {
 						className="mx-auto h-auto w-3/4"
 					></Image>
 
-					<h2 className="z-20 mx-auto w-fit rounded-full bg-woody/10 p-1 font-roca text-2xl">
+					<h2 className="bg-woody/10 z-20 mx-auto w-fit rounded-full p-1 font-roca text-2xl">
 						OCTOBER 5-6 @ UT SAN ANTONIO
 					</h2>
 				</div>
@@ -74,7 +74,7 @@ export default function Hero() {
 				alt="Forest floor"
 				width={0}
 				height={0}
-				className="absolute bottom-0 left-0 z-10 w-dvw"
+				className="absolute bottom-0 left-0 w-dvw"
 			></Image>
 		</section>
 	);

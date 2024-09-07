@@ -24,7 +24,7 @@ export default async function Navbar({ className }: NavbarProps) {
 		<div className="z-50 w-screen">
 			<div
 				className={cn(
-					`relative top-0 z-50 h-16 w-screen border-b border-b-border bg-nav ${berkshire.variable}`,
+					`relative top-0 z-50 h-16 w-screen border-b border-b-border bg-background ${berkshire.variable}`,
 					className,
 				)}
 			>
