@@ -1,56 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 579.82 961.04">
+<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  viewBox="0 0 579.82 961.04" preserveAspectRatio="none">
   <defs>
     <style>
       .cls-1 {
-        fill: none;
+      fill: none;
       }
 
       .cls-2 {
-        clip-path: url(#clippath-1);
+      clip-path: url(#clippath-1);
       }
 
       .cls-3 {
-        clip-path: url(#clippath-3);
+      clip-path: url(#clippath-3);
       }
 
       .cls-4 {
-        clip-path: url(#clippath-2);
+      clip-path: url(#clippath-2);
       }
 
       .cls-5 {
-        fill: #8ca193;
+      fill: #8ca193;
       }
 
       .cls-6 {
-        clip-path: url(#clippath);
+      clip-path: url(#clippath);
       }
 
       .cls-7 {
-        fill: #efd6ca;
+      fill: #efd6ca;
       }
     </style>
     <clipPath id="clippath">
-      <rect class="cls-1" x="0" width="579.82" height="960.52"/>
+      <rect class="cls-1" x="0" width="579.82" height="960.52" />
     </clipPath>
     <clipPath id="clippath-1">
-      <path class="cls-1" d="M193.38,16.74C223.01,6.63,256.9,0,290.07,0s65.09,5.68,94.5,15.79c.62.32,1.25.32,1.88.64,110.46,40.43,191.82,147.21,193.38,277.49v667.12H0V294.41C1.56,163.01,81.67,56.23,193.38,16.74Z"/>
+      <path class="cls-1"
+        d="M193.38,16.74C223.01,6.63,256.9,0,290.07,0s65.09,5.68,94.5,15.79c.62.32,1.25.32,1.88.64,110.46,40.43,191.82,147.21,193.38,277.49v667.12H0V294.41C1.56,163.01,81.67,56.23,193.38,16.74Z" />
     </clipPath>
     <clipPath id="clippath-2">
-      <rect class="cls-1" x="28.01" y="36.27" width="523.81" height="902.34"/>
+      <rect class="cls-1" x="28.01" y="36.27" width="523.81" height="902.34" />
     </clipPath>
     <clipPath id="clippath-3">
-      <path class="cls-1" d="M202.7,51.39c26.77-9.14,57.39-15.12,87.35-15.12s58.8,5.14,85.37,14.27c.57.29,1.13.29,1.7.57,99.79,36.53,173.28,132.99,174.7,251.44v635.99H28.01V303.02c1.42-119.49,73.78-215.95,174.7-251.62Z"/>
+      <path class="cls-1"
+        d="M202.7,51.39c26.77-9.14,57.39-15.12,87.35-15.12s58.8,5.14,85.37,14.27c.57.29,1.13.29,1.7.57,99.79,36.53,173.28,132.99,174.7,251.44v635.99H28.01V303.02c1.42-119.49,73.78-215.95,174.7-251.62Z" />
     </clipPath>
   </defs>
   <g class="cls-6">
     <g class="cls-2">
-      <path class="cls-7" d="M0,0h579.82v960.33H0V0Z"/>
+      <path class="cls-7" d="M0,0h579.82v960.33H0V0Z" />
     </g>
   </g>
   <g class="cls-4">
     <g class="cls-3">
-      <path class="cls-5" d="M28.01,36.27h523.81v902.34H28.01V36.27Z"/>
+      <path class="cls-5" d="M28.01,36.27h523.81v902.34H28.01V36.27Z" />
     </g>
   </g>
 </svg>

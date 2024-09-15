@@ -42,14 +42,16 @@
 
 		--radius: 0.5rem;
 
-		--gradient-color-1: #668cff;
-		--gradient-color-2: #3366ff;
-		--gradient-color-3: #002db3;
-		--gradient-color-4: #1952cc;
+		--gradient-color-1: #8FBC8F;
+		--gradient-color-2: #9D6332;
+		--gradient-color-3: #71491F;
+		--gradient-color-4: #596438;
+
 
 		--forest-green: 77, 21%, 37%;
 		--pixy-blue: 192, 94%, 63%;
 		--woody: 38, 68%, 16%;
+		--marrow: #EFD6CA;
 	}
 
 	.dark {
@@ -132,12 +134,20 @@
 	background-repeat: repeat-y;
 }
 
-.bg-about {
-	background-image: url("/design/green_arch.svg");
-	background-position: center;
-	background-size: cover;
-	background-repeat: no-repeat;
-	aspect-ratio: 579.8 / 961;
+@media (min-width: 768px) {
+	.bg-about {
+		background-image: url("/design/green_arch.svg");
+		background-position: center;
+		background-size: cover;
+		background-repeat: no-repeat;
+		aspect-ratio: 579.8 / 961;
+	}
+}
+
+
+
+.solid-shadow {
+	box-shadow: 1.25rem 1.25rem 0 var(--marrow);
 }
 
 /* svg.curved-title {

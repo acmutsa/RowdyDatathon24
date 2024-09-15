@@ -1,6 +1,7 @@
 import "./globals.css";
 import { ClerkProvider } from "@clerk/nextjs";
 import { cookies } from "next/headers";
+import { cn } from "@/lib/utils/client/cn";
 import { Analytics } from "@vercel/analytics/react";
 import { defaultTheme } from "config";
 import { Metadata } from "next";
@@ -18,7 +19,12 @@ export default function RootLayout({
 	return (
 		<ClerkProvider>
 			<html lang="en">
-				<body className={theme === "dark" ? "dark" : ""}>
+				<body
+					className={cn(
+						"bg-forest-ground",
+						theme === "dark" ? "dark" : "",
+					)}
+				>
 					{children}
 					<Analytics />
 				</body>

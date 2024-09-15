@@ -945,6 +945,7 @@ class Gradient {
 			"--gradient-color-2",
 			"--gradient-color-3",
 			"--gradient-color-4",
+			"--gradient-color-5",
 		]
 			.map((cssPropertyName) => {
 				let hex = this.computedCanvasStyle

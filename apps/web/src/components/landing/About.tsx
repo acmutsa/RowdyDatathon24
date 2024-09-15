@@ -2,14 +2,14 @@ import Balancer from "react-wrap-balancer";
 import Image from "next/image";
 export default function About() {
 	return (
-		<section className="bg-forest-ground min-h-screen w-full" id="About">
+		<section className="mt-20 w-full" id="About">
 			<div className="bg-about mx-auto w-min">
 				<div className="mx-auto flex h-full w-min flex-col items-center justify-center font-roca">
 					<div className="p-8">
-						<h1 className="text-center text-2xl font-black md:text-3xl">
+						<h1 className="text-center text-2xl font-black md:text-4xl">
 							About Us
 						</h1>
-						<h3 className="w-[40ch] text-wrap text-center text-lg font-bold md:px-0 md:text-xl">
+						<h3 className="w-[20ch] text-wrap text-center text-lg font-bold sm:w-[40ch] md:px-0 md:text-xl">
 							The Rowdy Datathon is a free, weekend-long,
 							overnight hackathon focused on data science wehre
 							students can network, learn about data science,
@@ -37,10 +37,10 @@ export default function About() {
 						></Image>
 					</div>
 					<div className="p-8">
-						<h1 className="text-center text-2xl font-black md:text-3xl">
+						<h1 className="text-center text-2xl font-black md:text-4xl">
 							Who Can Attend?
 						</h1>
-						<h3 className="w-[40ch] text-center text-lg font-bold md:px-0 md:text-xl">
+						<h3 className="w-[20ch] text-center text-lg font-bold sm:w-[40ch] md:px-0 md:text-xl">
 							We're thrilled to invite hackers of all skill
 							levels, backgrounds, and disciplines! Whether you're
 							a seasoned data analyst with countless datasets

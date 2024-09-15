@@ -30,13 +30,13 @@ export default function Home() {
 				<Hero />
 
 				<About />
-				{/* <Partners />
+				<Partners />
 				<WorkWithUs />
-				<Footer /> */}
+				{/* <Footer /> */}
 			</main>
 		</div>
 	);
 }
 
 export const runtime = "edge";
-export const revalidate = 30;
+export const revalidate = 300;
