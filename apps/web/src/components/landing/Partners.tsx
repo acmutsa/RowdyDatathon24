@@ -22,7 +22,7 @@ export default async function Partners() {
 	];
 
 	return (
-		<section className="relative min-h-screen w-full pt-20">
+		<section className="relative w-full pt-20">
 			<div className="w-full py-16">
 				{/* <BorderedText
 					text="Meet our Partners"
@@ -30,7 +30,7 @@ export default async function Partners() {
 					className="font-roca text-5xl"
 				/> */}
 				<h1 className="text-center font-roca text-4xl font-black text-marrow md:text-5xl">
-					Meet our Partners
+					Partnered With
 				</h1>
 			</div>
 

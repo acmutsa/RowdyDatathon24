@@ -1,40 +1,10 @@
 {
 	"partners": [
 		{
-			"name": "Cymanii",
-			"logo": "rd-logo.svg",
-			"url": "https://cymanii.org/",
-			"tier": "Gold Sponsor"
-		},
-		{
-			"name": "UTSA DS Dept.",
-			"logo": "UTSADS.svg",
-			"url": "https://sds.utsa.edu/",
-			"tier": "Gold Sponsor"
-		},
-		{
-			"name": "Swivel",
-			"logo": "swivel_logo.svg",
-			"url": "https://www.getswivel.io/",
-			"tier": "Silver Sponsor"
-		},
-		{
-			"name": "UTSA CS Dept.",
-			"logo": "UTSA_CS.svg",
-			"url": "https://sciences.utsa.edu/computer-science/",
-			"tier": "Silver Sponsor"
-		},
-		{
-			"name": "Frost Bank",
-			"logo": "FrostBank.svg",
-			"url": "https://www.frostbank.com/",
-			"tier": "Silver Sponsor"
-		},
-		{
-			"name": "Valero",
-			"logo": "ValeroLogo.svg",
-			"url": "https://www.valero.com/",
-			"tier": "Silver Sponsor"
+			"name": "NSA",
+			"logo": "nsa-logo.svg",
+			"url": "https://www.nsa.gov",
+			"tier": "Title Sponsor"
 		}
 	]
 }
