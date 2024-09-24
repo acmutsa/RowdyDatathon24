@@ -1,4 +1,4 @@
-import Navbar from "@/components/shared/Navbar";
+import LandingNavbar from "@/components/shared/LandingNavbar";
 import Hero from "@/components/landing/Hero";
 
 import About from "@/components/landing/About";
@@ -23,8 +23,8 @@ const oswald = Oswald({
 
 export default function Home() {
 	return (
-		<div className={`${oswald.className} overflow-hidden`}>
-			<Navbar />
+		<div className={`${oswald.className} bg-forest-ground overflow-hidden`}>
+			<LandingNavbar />
 			{/* <MLHBadge /> */}
 			<main>
 				<Hero />

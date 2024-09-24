@@ -5,12 +5,12 @@ export default function About() {
 			<div className="mx-auto w-fit">
 				<div className="green-arch-top w-full"></div>
 				<div className="green-arch-content w-full font-roca">
-					<div className="w-fit p-8">
+					<div className="w-fit px-8">
 						<div className="p-8">
-							<h1 className="text-center text-2xl font-black md:text-4xl">
+							<h1 className="-mt-16 text-center text-2xl font-black md:text-4xl">
 								About Us
 							</h1>
-							<h3 className="w-[20ch] text-wrap text-center text-lg font-bold sm:w-[40ch] md:px-0 md:text-xl">
+							<h3 className="w-[20ch] text-wrap text-center text-lg font-bold leading-loose tracking-widest sm:w-[40ch] md:px-0 md:text-xl">
 								The Rowdy Datathon is a free, weekend-long,
 								overnight hackathon focused on data science
 								where students can network, learn about data
@@ -41,7 +41,7 @@ export default function About() {
 							<h1 className="text-center text-2xl font-black md:text-4xl">
 								Who Can Attend?
 							</h1>
-							<h3 className="w-[20ch] text-center text-lg font-bold sm:w-[40ch] md:px-0 md:text-xl">
+							<h3 className="w-[20ch] text-center text-lg font-bold leading-loose tracking-widest sm:w-[40ch] md:px-0 md:text-xl">
 								We're thrilled to invite hackers of all skill
 								levels, backgrounds, and disciplines! Whether
 								you're a seasoned data analyst with countless

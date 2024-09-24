@@ -19,7 +19,7 @@ import { db } from "db";
 import { users } from "db/schema";
 import { eq } from "db/drizzle";
 import Link from "next/link";
-import { DropdownSwitcher } from "@/components/shared/ThemeSwitcher";
+// import { DropdownSwitcher } from "@/components/shared/ThemeSwitcher";
 import DefaultDropdownTrigger from "../dash/shared/DefaultDropDownTrigger";
 import MobileNavBarLinks from "./MobileNavBarLinks";
 
@@ -40,7 +40,7 @@ export default async function ProfileButton() {
 					</Button>
 				</DropdownMenuTrigger>
 				<DropdownMenuContent
-					className="mt-2 w-32 bg-[rgb(247,240,232)] dark:bg-black sm:w-40 lg:w-52"
+					className="mt-2 w-32 bg-popover sm:w-40 lg:w-52"
 					align="end"
 					forceMount
 				>
@@ -56,8 +56,8 @@ export default async function ProfileButton() {
 							</DropdownMenuItem>
 						</Link>
 						<MobileNavBarLinks />
-						<DropdownMenuSeparator className="bg-[rgb(228,228,231)] dark:bg-[rgb(39,39,42)]" />
-						<DropdownSwitcher />
+						<DropdownMenuSeparator className="bg-border" />
+						{/* <DropdownSwitcher /> */}
 						<Link href={`/bug-report`}>
 							<DropdownMenuItem className="cursor-pointer">
 								Report a Bug
@@ -88,7 +88,7 @@ export default async function ProfileButton() {
 					</Button>
 				</DropdownMenuTrigger>
 				<DropdownMenuContent
-					className="mt-2 w-32 bg-[rgb(247,240,232)] dark:bg-black sm:w-40 lg:w-52"
+					className="mt-2 w-32 bg-popover sm:w-40 lg:w-52"
 					align="end"
 					forceMount
 				>
@@ -105,8 +105,8 @@ export default async function ProfileButton() {
 							</DropdownMenuItem>
 						</Link>
 					</DropdownMenuGroup>
-					<DropdownMenuSeparator className="bg-[rgb(228,228,231)] dark:bg-[rgb(39,39,42)]" />
-					<DropdownSwitcher />
+					<DropdownMenuSeparator className="bg-border" />
+					{/* <DropdownSwitcher /> */}
 					<SignOutButton>
 						<DropdownMenuItem className="cursor-pointer hover:!bg-destructive">
 							Log out
@@ -149,7 +149,7 @@ export default async function ProfileButton() {
 						</p>
 					</div>
 				</DropdownMenuLabel>
-				<DropdownMenuSeparator className="bg-[rgb(228,228,231)] dark:bg-[rgb(39,39,42)]" />
+				<DropdownMenuSeparator className="bg-border" />
 				<DropdownMenuGroup>
 					<Link href={`/@${user.hackerTag}`}>
 						<DropdownMenuItem className="cursor-pointer">
@@ -170,7 +170,7 @@ export default async function ProfileButton() {
 							</Link>
 						))}
 					<MobileNavBarLinks />
-					<DropdownMenuSeparator className="bg-[rgb(228,228,231)] dark:bg-[rgb(39,39,42)]" />
+					<DropdownMenuSeparator className="bg-border" />
 					<Link href={`/bug-report`}>
 						<DropdownMenuItem className="cursor-pointer">
 							Report a Bug
@@ -182,8 +182,8 @@ export default async function ProfileButton() {
 						</DropdownMenuItem>
 					</Link>
 				</DropdownMenuGroup>
-				<DropdownMenuSeparator className="bg-[rgb(228,228,231)] dark:bg-[rgb(39,39,42)]" />
-				<DropdownSwitcher />
+				<DropdownMenuSeparator className="bg-border" />
+				{/* <DropdownSwitcher /> */}
 				<SignOutButton>
 					<DropdownMenuItem className="cursor-pointer hover:!bg-destructive">
 						Log out

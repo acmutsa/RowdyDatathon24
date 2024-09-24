@@ -18,7 +18,7 @@ export default function DashNavItem({ name, path }: DashNavItemProps) {
 						path !== "/admin" &&
 						path !== "/dash") ||
 					currPath === path
-						? "border-b-muted text-primary dark:border-b-primary"
+						? "border-b-forest-green text-forest-green dark:border-b-forest-green"
 						: "border-b-transparent text-muted-foreground hover:border-b-muted"
 				}`}
 			>

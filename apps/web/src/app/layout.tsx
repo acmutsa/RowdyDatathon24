@@ -15,16 +15,11 @@ export default function RootLayout({
 }: {
 	children: React.ReactNode;
 }) {
-	const theme = cookies().get("hk_theme")?.value || defaultTheme;
+	// const theme = cookies().get("hk_theme")?.value || defaultTheme;
 	return (
 		<ClerkProvider>
 			<html lang="en">
-				<body
-					className={cn(
-						"bg-forest-ground",
-						theme === "dark" ? "dark" : "",
-					)}
-				>
+				<body>
 					{children}
 					<Analytics />
 				</body>

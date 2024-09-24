@@ -63,10 +63,10 @@ export default {
 		guide: "https://go.rowdydatathon.org/guide",
 	},
 	icon: {
-		sm: "/img/logo/rd-logo-md.png",
-		md: "/img/logo/rd-logo-md",
-		lg: "/img/logo/rd-logo-lg.png",
-		svg: "/img/logo/rd-logo.svg",
+		sm: "/img/logo/rd-logo.png",
+		md: "/img/logo/rd-logo",
+		lg: "/img/logo/rd-logo.png",
+		svg: "/img/logo/rd-logo.png",
 	},
 	dashPaths: {
 		dash: {
@@ -79,7 +79,7 @@ export default {
 			Overview: "/admin",
 			Users: "/admin/users",
 			Events: "/admin/events",
-			Points: "/admin/points",
+			// Points: "/admin/points",
 			"Check-in": "/admin/check-in",
 			Toggles: "/admin/toggles",
 		},

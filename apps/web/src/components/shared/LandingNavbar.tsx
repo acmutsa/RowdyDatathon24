@@ -18,13 +18,13 @@ interface NavbarProps {
 	className?: string;
 }
 
-export default async function Navbar({ className }: NavbarProps) {
+export default async function LandingNavbar({ className }: NavbarProps) {
 	const user = await currentUser();
 	return (
 		<div className="z-50 w-screen">
 			<div
 				className={cn(
-					`relative top-0 z-50 h-16 w-screen border-b border-b-border bg-nav ${berkshire.variable}`,
+					`relative top-0 z-50 h-16 w-screen bg-nav ${berkshire.variable}`,
 					className,
 				)}
 			>
@@ -65,8 +65,8 @@ export default async function Navbar({ className }: NavbarProps) {
 										}
 									>
 										<Button
-											variant={"link"}
-											className="bg-nav hover:bg-background"
+											variant={"secondary"}
+											className="rounded-none bg-nav hover:bg-background"
 										>
 											{user.publicMetadata
 												.registrationComplete
@@ -79,8 +79,8 @@ export default async function Navbar({ className }: NavbarProps) {
 								<>
 									<Link href={"/sign-in"}>
 										<Button
-											variant={"link"}
-											className="bg-nav hover:bg-background"
+											variant={"default"}
+											className="rounded-none bg-nav hover:bg-forest-green"
 										>
 											Sign In
 										</Button>
