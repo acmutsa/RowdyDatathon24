@@ -36,21 +36,22 @@ export default function EventItem({
 		<Link href={href} className="m-0 w-full p-0">
 			<div className="flex h-full w-full cursor-pointer flex-col items-center space-y-6 rounded-xl border-[3px] border-b-[6px] border-muted px-2 py-4 lg:flex-row lg:justify-between lg:space-y-0 lg:border-0 lg:px-4 lg:py-7 lg:hover:bg-white/[0.08]">
 				<div className="flex h-full w-full flex-col items-center justify-center space-y-4 lg:w-auto lg:flex-row lg:gap-3 lg:space-y-0">
-					<h3 className="text-center text-lg font-bold md:text-2xl">
+					<h3 className="text-center text-lg font-bold text-primary md:text-2xl">
 						{event.title}
 					</h3>
 					<div>
 						<Badge
 							variant={"outline"}
 							style={{
-								borderColor: eventTypeColor,
+								backgroundColor: eventTypeColor,
 							}}
+							className="border-primary text-primary"
 						>
 							<p className="text-sm">{event.type}</p>
 						</Badge>
 					</div>
 				</div>
-				<div className="-pt-6 flex h-full flex-row items-center justify-end p-0">
+				<div className="-pt-6 flex h-full flex-row items-center justify-end p-0 text-primary">
 					<p className="lg:text-2zl md:text-lg">{`${startTimeFormatted} - ${endTimeFormatted}`}</p>
 				</div>
 			</div>

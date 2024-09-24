@@ -88,7 +88,7 @@ export default async function DashLayout({ children }: DashLayoutProps) {
 						<ProfileButton />
 					</div>
 				</div>
-				<div className="flex h-12 w-full border-b border-b-border bg-nav px-5">
+				<div className="flex h-12 w-full border-b border-b-forest-green bg-nav px-5">
 					{Object.entries(c.dashPaths.dash).map(([name, path]) => (
 						<DashNavItem key={name} name={name} path={path} />
 					))}

@@ -25,7 +25,7 @@
 		--card-foreground: var(--woody);
 
 		--border: 0 0 100%;
-		--input: var(--marrow);
+		--input: var(--woody);
 
 		--primary: var(--woody);
 		--primary-foreground: 0 0% 98%;
@@ -33,24 +33,24 @@
 		--secondary: 77 21% 37%;
 		--secondary-foreground: 0 0% 98%;
 
-		--accent: 240 3.7% 15.9%;
+		--accent: var(--woody);
 		--accent-foreground: 0 0% 98%;
 
 		--destructive: 0 62.8% 30.6%;
 		--destructive-foreground: 0 85.7% 97.3%;
 
-		--ring: 240 3.7% 15.9%;
+		--ring: var(--woody);
 
 		--radius: 0.5rem;
 
-		--gradient-color-1: #8FBC8F;
+		--gradient-color-1: #040404;
 		--gradient-color-2: #9D6332;
 		--gradient-color-3: #71491F;
 		--gradient-color-4: #596438;
 
 		--forest-green: 77 21% 37%;
 		--pixy-blue: 192 94% 63%;
-		--woody: 38 68% 16%;
+		--woody: 30 68% 15%;
 		--marrow: 19 54% 86%;
 		--mystic-sky: 140 10% 59%;
 	}

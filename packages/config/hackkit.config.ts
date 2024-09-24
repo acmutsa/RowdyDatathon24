@@ -1,6 +1,6 @@
-export const defaultTheme = "dark";
+const defaultTheme = "dark";
 
-export default {
+const c = {
 	hackathonName: "Rowdy Datathon",
 	itteration: "2024",
 	siteUrl: "https://rowdydatathon.org", // Do not have a trailing slash
@@ -593,7 +593,7 @@ const schools = [
 	"Other",
 ] as const;
 
-export const majors = [
+const majors = [
 	"Accounting",
 	"Accounting Technician",
 	"Actuarial Science",

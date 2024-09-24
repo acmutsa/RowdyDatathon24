@@ -32,7 +32,7 @@ export default async function Navbar({ className }: NavbarProps) {
 					<div className="col-span-2 flex items-center justify-start gap-x-5">
 						<Link
 							href={"/"}
-							className="mr-5 flex items-center gap-x-2"
+							className="mr-5 flex cursor-pointer items-center gap-x-2"
 						>
 							<Image
 								src={c.icon.svg}
@@ -65,8 +65,8 @@ export default async function Navbar({ className }: NavbarProps) {
 										}
 									>
 										<Button
-											variant={"link"}
-											className="bg-nav hover:bg-background"
+											variant={"secondary"}
+											className="rounded-none bg-forest-green hover:bg-forest-green/85"
 										>
 											{user.publicMetadata
 												.registrationComplete
@@ -79,8 +79,8 @@ export default async function Navbar({ className }: NavbarProps) {
 								<>
 									<Link href={"/sign-in"}>
 										<Button
-											variant={"link"}
-											className="bg-nav hover:bg-background"
+											variant={"secondary"}
+											className="rounded-none bg-forest-green hover:bg-forest-green/85"
 										>
 											Sign In
 										</Button>

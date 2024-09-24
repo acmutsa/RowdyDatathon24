@@ -45,7 +45,7 @@ export function TitleBubble() {
 			<GradientHero />
 			<div className="relative z-20 flex h-full w-full flex-col items-center justify-center gap-y-2 rounded-xl">
 				<h1
-					className={`text-7xl font-black text-foreground ${berkshire.className}`}
+					className={`text-center text-7xl font-black text-foreground ${berkshire.className}`}
 				>
 					{c.hackathonName}
 				</h1>
