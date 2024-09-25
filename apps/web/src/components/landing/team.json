@@ -1,0 +1,43 @@
+{"teamMembers": [{
+    "fname": "Indra",
+    "lname": "Garcia",
+    "role": "Director",
+    "website": "",
+    "imgLink": "indra.png"
+},{
+    "fname": "Natasha",
+    "lname": "Blussick",
+    "role": "Co-Director",
+    "website": "",
+    "imgLink": "natasha.png"
+},{
+    "fname": "Kailey",
+    "lname": "Perrino",
+    "role": "Finance",
+    "website": "",
+    "imgLink": "kailey.png"
+},{
+    "fname": "Jade",
+    "lname": "Romero",
+    "role": "Design",
+    "website": "",
+    "imgLink": "jade.png"
+},{
+    "fname": "Diego",
+    "lname": "Medina",
+    "role": "Design",
+    "website": "",
+    "imgLink": "diego.png"
+},{
+    "fname": "Christian",
+    "lname": "Walker",
+    "role": "Tech",
+    "website": "",
+    "imgLink": "christian.png"
+},{
+    "fname": "Joshua",
+    "lname": "Silva",
+    "role": "Tech",
+    "website": "https://www.joshuasilva.me",
+    "imgLink": "josh.png"
+}]}

@@ -1,6 +1,7 @@
 import "./globals.css";
 import { ClerkProvider } from "@clerk/nextjs";
 import { cookies } from "next/headers";
+import { cn } from "@/lib/utils/client/cn";
 import { Analytics } from "@vercel/analytics/react";
 import { defaultTheme } from "config";
 import { Metadata } from "next";
@@ -14,11 +15,11 @@ export default function RootLayout({
 }: {
 	children: React.ReactNode;
 }) {
-	const theme = cookies().get("hk_theme")?.value || defaultTheme;
+	// const theme = cookies().get("hk_theme")?.value || defaultTheme;
 	return (
 		<ClerkProvider>
 			<html lang="en">
-				<body className={theme === "dark" ? "dark" : ""}>
+				<body>
 					{children}
 					<Analytics />
 				</body>

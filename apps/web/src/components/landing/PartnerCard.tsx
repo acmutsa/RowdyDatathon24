@@ -39,48 +39,21 @@ function PartnerCard({
 	partner: Partner;
 	is_title: boolean;
 }) {
-	const text: string = is_title
-		? "text-2xl sm:text-3xl xl:text-4xl 2xl:text-[3rem]"
-		: "text-md sm:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl";
-
-	const height: string = is_title
-		? "h-[15rem] sm:h-[15rem] md:h-[16rem] lg:h-[20rem] xl:h-[20rem] 2xl:h-[22rem]"
-		: "h-[9rem] sm:h-[11rem] md:h-[11rem] lg:h-[12rem] xl:h-[14rem] 2xl:h-[17rem]";
-	const image: string = is_title
-		? "w-[17rem] sm:w-[17rem] md:w-[18rem] xl:w-[20rem] 2xl:w-[24rem]"
-		: "w-[8rem] sm:w-[10rem] md:w-[14rem] lg:w-48 xl:w-[16rem]";
-
 	return (
 		<Link
 			href={partner?.url}
 			target="_blank"
-			className={`duration-350 group font-semibold opacity-100 transition ease-in-out hover:-translate-y-8 ${text} ${
-				tierColorMap[partner?.tier]
-			}`}
+			className={`duration-350 group font-semibold opacity-100 transition ease-in-out hover:-translate-y-8`}
 		>
-			<div
-				className={`flex w-full items-center justify-center ${height} rounded-lg bg-[#d2b48c] bg-opacity-45 p-3 shadow-none`}
-			>
+			<div className="solid-shadow aspect-square rounded-3xl bg-forest-green p-0">
 				<Image
-					src={`/img/partner-logos/${partner?.logo}`}
-					width={0}
-					height={0}
-					quality={100}
-					priority={true}
-					alt={`${partner?.name} logo`}
-					className={`h-auto ${image}`}
+					src={`/img/logo/${partner.logo}`}
+					className="aspect-square w-32 md:w-64"
+					alt={`${partner.name} logo`}
+					width={64}
+					height={64}
 				/>
 			</div>
-			<h2
-				className={`w-full text-center transition delay-100 duration-300 ease-in-out ${
-					is_title ? "pb-8" : "pb-4"
-				} invisible group-hover:visible group-hover:translate-y-4`}
-			>
-				{partner?.name}
-			</h2>
-			<h2 className="invisible w-full pb-4 text-center transition delay-75 duration-300 ease-in-out group-hover:visible group-hover:translate-y-4">
-				{partner?.tier}
-			</h2>
 		</Link>
 	);
 }

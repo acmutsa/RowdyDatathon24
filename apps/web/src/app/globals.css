@@ -8,71 +8,77 @@
 	:root {
 		--font-roca: 'roca', sans-serif;
 
-		--background: 0 0% 100%;
-		--foreground: 240 10% 3.9%;
+		--background: var(--mystic-sky);
+		--foreground: 0 0% 98%;
 
-		--nav: 255, 255, 255;
-		--hackathon-primary: 206 86% 52%;
+		--nav: var(--woody);
 
-		--muted: 240 4.8% 95.9%;
-		--muted-foreground: 240 3.8% 46.1%;
+		--muted: 240 3.7% 15.9%;
+		--muted-foreground: 240, 23%, 95%;
 
-		--popover: 0 0% 100%;
-		--popover-foreground: 240 10% 3.9%;
+		--hackathon-primary: var(--forest-green);
 
-		--card: 0 0% 100%;
-		--card-foreground: 240 10% 3.9%;
+		--popover: 142 14% 77%;
+		--popover-foreground: var(--woody);
 
-		--border: 240 5.9% 90%;
-		--input: 240 5.9% 90%;
+		--card: var(--popover);
+		--card-foreground: var(--woody);
 
-		--primary: 240 5.9% 10%;
+		--border: 0 0 100%;
+		--input: var(--woody);
+
+		--primary: var(--woody);
 		--primary-foreground: 0 0% 98%;
 
-		--secondary: 240 4.8% 95.9%;
-		--secondary-foreground: 240 5.9% 10%;
+		--secondary: 77 21% 37%;
+		--secondary-foreground: 0 0% 98%;
 
-		--accent: 240 4.8% 95.9%;
-		--accent-foreground: 240 5.9% 10%;
+		--accent: var(--woody);
+		--accent-foreground: 0 0% 98%;
 
-		--destructive: 0 84.2% 60.2%;
-		--destructive-foreground: 0 0% 98%;
+		--destructive: 0 62.8% 30.6%;
+		--destructive-foreground: 0 85.7% 97.3%;
 
-		--ring: 240 5% 64.9%;
+		--ring: var(--woody);
 
 		--radius: 0.5rem;
 
-		--gradient-color-1: #668cff;
-		--gradient-color-2: #3366ff;
-		--gradient-color-3: #002db3;
-		--gradient-color-4: #1952cc;
+		--gradient-color-1: #040404;
+		--gradient-color-2: #9D6332;
+		--gradient-color-3: #71491F;
+		--gradient-color-4: #596438;
 
-		--forest-green: 77, 21%, 37%;
-		--pixy-blue: 192, 94%, 63%;
+		--forest-green: 77 21% 37%;
+		--pixy-blue: 192 94% 63%;
+		--woody: 30 68% 15%;
+		--marrow: 19 54% 86%;
+		--mystic-sky: 140 10% 59%;
 	}
 
-	.dark {
-		--background: 240 10% 3.9%;
+	/* .dark {
+		--background: var(--mystic-sky);
 		--foreground: 0 0% 98%;
 
-		--nav: 0, 0, 0;
+		--nav: var(--woody);
 
 		--muted: 240 3.7% 15.9%;
-		--muted-foreground: 240 5% 64.9%;
+		--muted-foreground: 240, 23%, 95%;
 
-		--popover: 240 10% 3.9%;
-		--popover-foreground: 0 0% 98%;
+		--hackathon-primary: var(--marrow);
+
+		--popover: 142 14% 77%;
+		--popover-foreground: var(--woody);
 
 		--card: 240 10% 3.9%;
 		--card-foreground: 0 0% 98%;
 
-		--border: 240 3.7% 15.9%;
+		--border: 0 0 100%;
 		--input: 240 3.7% 15.9%;
 
-		--primary: 0 0% 98%;
-		--primary-foreground: 240 5.9% 10%;
+		--primary: var(--woody);
+		--primary-foreground: 0 0% 98%;
 
-		--secondary: 240 3.7% 15.9%;
+		--secondary: 77 21% 37%;
 		--secondary-foreground: 0 0% 98%;
 
 		--accent: 240 3.7% 15.9%;
@@ -82,7 +88,7 @@
 		--destructive-foreground: 0 85.7% 97.3%;
 
 		--ring: 240 3.7% 15.9%;
-	}
+	} */
 }
 
 @layer base {
@@ -119,16 +125,76 @@
 }
 
 .hero-section {
-	background-image: url("/design/datathon_bg_full.svg");
-	background-position: center;
-	background-size: cover
+	/* background-image: url("/design/datathon_bg_full.svg"); */
+	/* background-size: cover; */
+	/* background-attachment: fixed; */
+	background-color: #8CA193;
 }
 
-svg.curved-title {
+.bg-forest-ground {
+	background-image: url("/design/grass_seamless.svg");
+	background-size: contain;
+	background-repeat: repeat-y;
+}
+
+.bg-forest-ground-top {
+	background-image: url("/design/grass_full.svg");
+	background-size: 100%;
+	background-repeat: repeat-y;
+}
+
+
+.green-arch-top {
+	background-image: url("/design/green_arch_top.svg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	aspect-ratio: 579.8 / 294.4;
+}
+
+.green-arch-content {
+	background-image: url("/design/green_arch_content.svg");
+	background-size: contain;
+	background-repeat: no-repeat;
+	aspect-ratio: 579.8 / 649.27;
+}
+
+.green-arch-bottom {
+	background-color: url("/design/green_arch_bottom.svg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	aspect-ratio: 503.34 / 22.2;
+}
+
+.white-arch-top {
+	background-image: url("/design/white_arch_top.svg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	aspect-ratio: 503.34 / 225.4;
+}
+
+.white-arch-content {
+	background-image: url("/design/white_arch_content.svg");
+	background-size: contain;
+	background-repeat: no-repeat;
+	aspect-ratio: 503.34 / 731.4;
+}
+
+.white-arch-bottom {
+	background-color: url("/design/white_arch_bottom.svg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	aspect-ratio: 503.34 / 22.2;
+}
+
+.solid-shadow {
+	box-shadow: 1.25rem 1.25rem 0 var(--marrow);
+}
+
+/* svg.curved-title {
 	transform: rotate(0);
 }
 
 svg.curved-title text {
 	text-anchor: middle;
 	fill: var(--foreground);
-}
+} */

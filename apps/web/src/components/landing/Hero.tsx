@@ -14,24 +14,32 @@ const berkshire = Berkshire_Swash({
 export default function Hero() {
 	return (
 		<section className="hero-section relative z-0 h-screen w-full">
-			<div className="z-10 flex h-full w-full flex-col items-center">
-				<div className="mt-32 w-full text-center">
+			<Image
+				src={"/design/hero_forest.svg"}
+				alt="Forest"
+				width={0}
+				height={0}
+				className="absolute bottom-1/2 left-1/2 z-10 w-[200dvh] -translate-x-1/2 translate-y-1/3 lg:-top-1/2 lg:translate-y-0"
+			></Image>
+			<div className="z-50 flex w-full flex-col items-center">
+				<div className="z-50 mt-32 w-full text-center">
 					<Image
-						src={"/design/datathon_title.svg"}
+						src={"/design/hero_title.svg"}
 						width={750}
 						height={32}
 						alt="Rowdy Datathon"
 						className="mx-auto h-auto w-3/4"
 					></Image>
-					<h2 className="font-roca z-10 mx-auto w-fit rounded-full bg-black/10 p-1 text-2xl">
+
+					<h2 className="z-20 mx-auto w-fit rounded-full bg-black/10 p-1 font-roca text-lg md:text-2xl lg:text-3xl">
 						OCTOBER 5-6 @ UT SAN ANTONIO
 					</h2>
 				</div>
 				<Link
 					href="/sign-up"
-					className="bg-forest-green z-20 mt-16 rounded-full p-2"
+					className="z-20 mt-16 rounded-full bg-woody p-4 text-xl"
 				>
-					<h4>Click Here To Register!</h4>
+					<h4>Register Now!</h4>
 				</Link>
 			</div>
 			{/* <div className="absolute top-[85dvh] flex w-full flex-wrap items-center justify-center gap-x-2 gap-y-4">
@@ -49,8 +57,8 @@ export default function Hero() {
 					</Link>
 				</div>
 			</div> */}
-			<div className="fixed bottom-0 left-0 p-8 text-center hover:scale-125">
-				<Link href="https://2023.rowdydatathon.org" className="z-20">
+			<div className="fixed bottom-0 left-0 z-50 hidden p-8 text-center hover:scale-125 md:block">
+				<Link href="https://2023.rowdydatathon.org" className="z-50">
 					<Image
 						src="/design/rd23_ghost.svg"
 						width={64}
@@ -61,6 +69,14 @@ export default function Hero() {
 					<h5>Previous year</h5>
 				</Link>
 			</div>
+			<Image
+				src="/design/jades_bear.svg"
+				width={0}
+				height={0}
+				alt="Jade's Bear"
+				className="absolute left-1/3 z-40 h-auto w-32"
+			/>
+			<div className="bg-forest-ground-top absolute left-0 right-0 top-1/3 -z-20 h-2/3"></div>
 		</section>
 	);
 }

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1811.1 1651.4">
+  <defs>
+    <style>
+      .cls-1 {
+        isolation: isolate;
+      }
+    </style>
+  </defs>
+  <g id="Layer_1-2" data-name="Layer_1">
+    <g id="tree-darker">
+      <image class="cls-1" width="993" height="2035" transform="translate(168.73 204.14) scale(.8 .69)" xlink:href="datathon_landing_forest-2.png"/>
+    </g>
+    <g id="tree-darker-2">
+      <image class="cls-1" width="991" height="2063" transform="translate(-67.24 33.05) scale(.79 .68)" xlink:href="datathon_landing_forest-4.png"/>
+    </g>
+    <g id="tree-brighter">
+      <image class="cls-1" width="989" height="2229" transform="translate(709.06 355.82) scale(.53)" xlink:href="datathon_landing_forest-6.png"/>
+    </g>
+    <g id="tree-darker-3">
+      <image class="cls-1" width="992" height="2036" transform="translate(873.21 155.94) scale(.8 .69)" xlink:href="datathon_landing_forest-8.png"/>
+    </g>
+    <g id="tree-brighter-2">
+      <image class="cls-1" width="994" height="2044" transform="translate(1129.03 354) scale(.69 .57)" xlink:href="datathon_landing_forest-10.png"/>
+    </g>
+    <g id="tree-brighter-3">
+      <image class="cls-1" width="990" height="2651" transform="translate(13.98 550.65) scale(.37)" xlink:href="datathon_landing_forest-12.png"/>
+    </g>
+  </g>
+</svg>

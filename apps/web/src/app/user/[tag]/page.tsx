@@ -22,8 +22,8 @@ export default async function ({ params }: { params: { tag: string } }) {
 	return (
 		<>
 			<Navbar />
-			<div className="max-w-screen relative flex min-h-screen items-center justify-center bg-nav">
-				<div className="absolute top-0 h-[50vh] w-[60vw] -translate-y-[22vh] bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[color-mix(in_hsl_longer_hue,hsl(var(--hackathon-primary))_80%,#fff)] via-hackathon to-transparent opacity-50 blur-[100px] will-change-transform" />
+			<div className="max-w-screen bg-mystic-sky relative flex min-h-screen items-center justify-center">
+				{/* <div className="absolute top-0 h-[50vh] w-[60vw] -translate-y-[22vh] bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[color-mix(in_hsl_longer_hue,hsl(var(--hackathon-primary))_80%,#fff)] via-hackathon to-transparent opacity-50 blur-[100px] will-change-transform" /> */}
 				<div className="grid min-h-[45vh] w-full max-w-5xl grid-cols-5 gap-x-2">
 					<div className="flex flex-col justify-center">
 						<div className="relative aspect-square w-full overflow-hidden rounded-full">

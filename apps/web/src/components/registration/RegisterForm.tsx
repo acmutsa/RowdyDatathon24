@@ -51,7 +51,7 @@ import { FileRejection, useDropzone } from "react-dropzone";
 import { put, type PutBlobResult } from "@vercel/blob";
 import { Tag, TagInput } from "@/components/shadcn/ui/tag/tag-input";
 import CreatingRegistration from "./CreatingRegistration";
-
+import { bucketResumeBaseUploadUrl } from "config";
 interface RegisterFormProps {
 	defaultEmail: string;
 }

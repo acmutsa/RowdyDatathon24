@@ -32,7 +32,7 @@ export default async function Navbar({ className }: NavbarProps) {
 					<div className="col-span-2 flex items-center justify-start gap-x-5">
 						<Link
 							href={"/"}
-							className="mr-5 flex items-center gap-x-2"
+							className="mr-5 flex cursor-pointer items-center gap-x-2"
 						>
 							<Image
 								src={c.icon.svg}
@@ -42,7 +42,7 @@ export default async function Navbar({ className }: NavbarProps) {
 							/>
 							{/* <div className="bg-muted-foreground h-[45%] rotate-[25deg] w-[2px]" /> */}
 							<h2
-								className={`${berkshire.className} text-lg font-bold text-[#3186AF] dark:text-[#49D6F9]`}
+								className={`${berkshire.className} text-lg font-bold`}
 							>
 								{c.hackathonName}
 							</h2>
@@ -52,7 +52,7 @@ export default async function Navbar({ className }: NavbarProps) {
 						</div>
 					</div>
 
-					<div className="flex items-center justify-between space-x-2 md:justify-center">
+					<div className="flex items-center justify-between space-x-2 font-roca md:justify-center">
 						<div className="hidden gap-x-4 md:flex">
 							{user ? (
 								<>
@@ -65,8 +65,8 @@ export default async function Navbar({ className }: NavbarProps) {
 										}
 									>
 										<Button
-											variant={"outline"}
-											className="bg-nav hover:bg-background"
+											variant={"secondary"}
+											className="rounded-none bg-forest-green hover:bg-forest-green/85"
 										>
 											{user.publicMetadata
 												.registrationComplete
@@ -79,14 +79,19 @@ export default async function Navbar({ className }: NavbarProps) {
 								<>
 									<Link href={"/sign-in"}>
 										<Button
-											variant={"outline"}
-											className="bg-nav hover:bg-background"
+											variant={"secondary"}
+											className="rounded-none bg-forest-green hover:bg-forest-green/85"
 										>
 											Sign In
 										</Button>
 									</Link>
 									<Link href={"/sign-up"}>
-										<Button>Register</Button>
+										<Button
+											variant={"secondary"}
+											className="rounded-none"
+										>
+											Register
+										</Button>
 									</Link>
 								</>
 							)}

@@ -3,12 +3,19 @@ import Link from "next/link";
 import c from "config";
 import { format } from "date-fns";
 import GradientHero from "./GradientHero";
+import { Berkshire_Swash } from "next/font/google";
 // import { users } from "db/schema";
 import QRCode from "react-qr-code";
 
 // interface MYInfoProps {
 // 	user: typeof users.$inferSelect;
 // }
+
+const berkshire = Berkshire_Swash({
+	weight: "400",
+	variable: "--font-berkshire",
+	subsets: ["latin"],
+});
 
 export function Questions() {
 	return (
@@ -37,7 +44,9 @@ export function TitleBubble() {
 		<div className="relative col-span-1 !col-start-1 !row-start-1 aspect-video h-full w-full overflow-hidden rounded-xl border border-hackathon p-5 sm:col-span-2 sm:row-span-2 lg:!col-start-auto lg:!row-start-auto lg:aspect-auto">
 			<GradientHero />
 			<div className="relative z-20 flex h-full w-full flex-col items-center justify-center gap-y-2 rounded-xl">
-				<h1 className="text-7xl font-black text-foreground">
+				<h1
+					className={`text-center text-7xl font-black text-foreground ${berkshire.className}`}
+				>
 					{c.hackathonName}
 				</h1>
 				<h2 className="text-center font-mono text-xs text-foreground sm:text-sm">

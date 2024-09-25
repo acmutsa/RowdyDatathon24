@@ -1,29 +1,58 @@
-import Balancer from "react-wrap-balancer";
 import Image from "next/image";
-import D1 from "../../../public/img/landing/d1.svg";
-import D2 from "../../../public/img/landing/d2.svg";
-import D3 from "../../../public/img/landing/d3.svg";
-import D4 from "../../../public/img/landing/d4.svg";
-import Dino_Coding from "../../../public/img/landing/dinos_coding.png";
 export default function About() {
-	const d1_stylesheet = {
-		width: "25rem",
-		height: "auto",
-		sm: "width: 30rem",
-	};
 	return (
-		<section
-			className="flex min-h-screen w-full items-center justify-center border-y-2 border-muted-foreground"
-			id="About"
-		>
-			<div className="flex w-full flex-col items-center justify-center">
-				<h1 className="text-center text-4xl font-black md:text-5xl">
-					About Section
-				</h1>
-				<h3 className="px-4 text-center text-lg font-bold md:px-0 md:text-2xl">
-					Introduce the hackathon and its purpose! Make it sound
-					enticing
-				</h3>
+		<section className="min-h-screen w-full py-20">
+			<div className="mx-auto w-fit">
+				<div className="green-arch-top w-full"></div>
+				<div className="green-arch-content w-full font-roca">
+					<div className="w-fit px-8">
+						<div className="p-8">
+							<h1 className="-mt-16 text-center text-2xl font-black md:text-4xl">
+								About Us
+							</h1>
+							<h3 className="w-[20ch] text-wrap text-center text-lg font-bold leading-loose tracking-widest sm:w-[40ch] md:px-0 md:text-xl">
+								The Rowdy Datathon is a free, weekend-long,
+								overnight hackathon focused on data science
+								where students can network, learn about data
+								science, code, and collaborate!
+							</h3>
+						</div>
+						<div className="flex w-full justify-around px-6">
+							<Image
+								src="/design/bear_1.svg"
+								alt="decorative bear"
+								width={32}
+								height={32}
+							></Image>
+							<Image
+								src="/design/bear_2.svg"
+								alt="decorative bear"
+								width={32}
+								height={32}
+							></Image>
+							<Image
+								src="/design/bear_1.svg"
+								alt="decorative bear"
+								width={32}
+								height={32}
+							></Image>
+						</div>
+						<div className="p-8">
+							<h1 className="text-center text-2xl font-black md:text-4xl">
+								Who Can Attend?
+							</h1>
+							<h3 className="w-[20ch] text-center text-lg font-bold leading-loose tracking-widest sm:w-[40ch] md:px-0 md:text-xl">
+								We're thrilled to invite hackers of all skill
+								levels, backgrounds, and disciplines! Whether
+								you're a seasoned data analyst with countless
+								datasets under your belt or a newcomer eager to
+								dive into your first one, Datathon has a spot
+								just for you
+							</h3>
+						</div>
+					</div>
+				</div>
+				<div className="green-arch-bottom w-full bg-[#EFD6CA]"></div>
 			</div>
 		</section>
 	);

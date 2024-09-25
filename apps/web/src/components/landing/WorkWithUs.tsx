@@ -1,13 +1,25 @@
+import { Person } from "./Person";
+import TeamMember from "./TeamMember";
+import team from "./team.json";
+
 export default function WorkWithUs() {
 	return (
-		<section className="flex min-h-screen w-full flex-col items-center justify-center border-y-2 border-muted-foreground">
-			<h1 className="text-center text-4xl font-black md:text-5xl">
-				Work With Us Section
-			</h1>
-			<h3 className="px-4 text-center text-lg font-bold md:text-2xl lg:px-0">
-				Incentivize companies to monetarily support and other students
-				to volunteer to help out!{" "}
-			</h3>
+		<section className="relative min-h-screen w-full py-20">
+			<div className="mx-auto w-fit px-8 pt-28">
+				<div>
+					<h1 className="white-arch-top flex w-full flex-col justify-end pb-8 text-center font-roca text-4xl font-bold text-forest-green md:text-5xl">
+						Meet the Team
+					</h1>
+				</div>
+				<div className="white-arch-content w-full">
+					<div className="z-20 mx-auto flex max-w-xl flex-wrap content-center items-center justify-center gap-16 px-8">
+						{(team.teamMembers as Person[]).map((p: Person) => (
+							<TeamMember person={p} />
+						))}
+					</div>
+				</div>
+				<div className="white-arch-bottom w-full bg-[#8CA193]"></div>
+			</div>
 		</section>
 	);
 }
