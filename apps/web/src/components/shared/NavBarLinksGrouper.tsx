@@ -9,13 +9,12 @@ export default async function NavBarLinksGrouper() {
 	for (const item of nav.items) {
 		if (item.enabled) {
 			toRender.push(
-				<Link key={item.name} href={item.url}>
-					<Button
-						variant={"default"}
-						className="font-roca leading-tight text-muted-foreground hover:underline"
-					>
-						{item.name}
-					</Button>
+				<Link
+					key={item.name}
+					href={item.url}
+					className="align-text-middle h-min font-roca text-sm leading-tight text-muted-foreground hover:underline"
+				>
+					{item.name}
 				</Link>,
 			);
 		}
