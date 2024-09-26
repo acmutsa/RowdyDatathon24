@@ -1,5 +1,7 @@
 import { getAllNavItems } from "@/lib/utils/server/redis";
 import NavbarItem from "./NavbarItem";
+import Link from "next/link";
+import { Button } from "../shadcn/ui/button";
 
 export default async function NavBarLinksGrouper() {
 	const nav = await getAllNavItems();
@@ -7,9 +9,14 @@ export default async function NavBarLinksGrouper() {
 	for (const item of nav.items) {
 		if (item.enabled) {
 			toRender.push(
-				<NavbarItem key={item.name} link={item.url}>
-					{item.name}
-				</NavbarItem>,
+				<Link key={item.name} href={item.url}>
+					<Button
+						variant={"default"}
+						className="font-roca leading-tight text-muted-foreground hover:underline"
+					>
+						{item.name}
+					</Button>
+				</Link>,
 			);
 		}
 	}
