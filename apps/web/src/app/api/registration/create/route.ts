@@ -124,7 +124,7 @@ export async function POST(req: Request) {
 		});
 	});
 
-	clerkClient.users.updateUser(user.id, {
+	await clerkClient.users.updateUser(user.id, {
 		publicMetadata: {
 			...user.publicMetadata,
 			registrationComplete: true,
