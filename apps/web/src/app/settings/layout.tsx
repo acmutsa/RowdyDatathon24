@@ -1,4 +1,6 @@
 import { auth, currentUser } from "@clerk/nextjs";
+import { eq, db } from "db";
+import { users } from "db/schema";
 import { redirect } from "next/navigation";
 import type { ReactNode } from "react";
 import SettingsSection from "@/components/settings/SettingsSection";
@@ -14,7 +16,11 @@ export default async function ({ children }: { children: ReactNode }) {
 		return redirect("/sign-in");
 	}
 
-	if (!user.publicMetadata.registrationComplete) {
+	const dbUser = await db.query.users.findFirst({
+		where: eq(users.clerkID, user.id),
+	});
+
+	if (!dbUser) {
 		return redirect("/register");
 	}
 

@@ -1,6 +1,8 @@
 import Link from "next/link";
 import Image from "next/image";
 import c from "config";
+import { db, eq } from "db";
+import { users } from "db/schema";
 import { Button } from "../shadcn/ui/button";
 import ProfileButton from "./ProfileButton";
 import { auth, currentUser } from "@clerk/nextjs";
@@ -20,6 +22,10 @@ interface NavbarProps {
 
 export default async function LandingNavbar({ className }: NavbarProps) {
 	const user = await currentUser();
+
+	const dbUser = await db.query.users.findFirst({
+		where: eq(users.clerkID, user?.id ?? ""),
+	});
 	return (
 		<div className="z-50 w-screen">
 			<div
@@ -56,20 +62,12 @@ export default async function LandingNavbar({ className }: NavbarProps) {
 						<div className="hidden gap-x-4 md:flex">
 							{user ? (
 								<>
-									<Link
-										href={
-											user.publicMetadata
-												.registrationComplete
-												? "/dash"
-												: "/register"
-										}
-									>
+									<Link href={dbUser ? "/dash" : "/register"}>
 										<Button
 											variant={"secondary"}
 											className="rounded-none bg-nav hover:bg-background"
 										>
-											{user.publicMetadata
-												.registrationComplete
+											{dbUser
 												? "Dashboard"
 												: "Complete Registration"}
 										</Button>
