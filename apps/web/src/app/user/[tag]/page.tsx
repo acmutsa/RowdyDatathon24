@@ -25,7 +25,7 @@ export default async function ({ params }: { params: { tag: string } }) {
 			<div className="max-w-screen bg-mystic-sky relative flex min-h-screen items-center justify-center">
 				{/* <div className="absolute top-0 h-[50vh] w-[60vw] -translate-y-[22vh] bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[color-mix(in_hsl_longer_hue,hsl(var(--hackathon-primary))_80%,#fff)] via-hackathon to-transparent opacity-50 blur-[100px] will-change-transform" /> */}
 				<div className="grid min-h-[45vh] w-full max-w-5xl grid-cols-5 gap-x-2">
-					<div className="flex flex-col justify-center">
+					<div className="flex flex-col justify-center text-center max-md:col-span-3 max-sm:col-start-2">
 						<div className="relative aspect-square w-full overflow-hidden rounded-full">
 							<Image
 								fill
@@ -37,64 +37,72 @@ export default async function ({ params }: { params: { tag: string } }) {
 						<h1 className="mt-2 text-2xl font-bold">
 							{user.firstName} {user.lastName}
 						</h1>
-						<div className="mt-1 flex items-center gap-x-2">
+						<div className="mt-1 flex items-center justify-center gap-x-2">
 							<h2 className="font-mono text-lg text-muted-foreground">
 								@{user.hackerTag}
 							</h2>
 							<RoleBadge role={user.role} />
 						</div>
-						{user.registrationData.GitHub &&
-							user.registrationData.GitHub.length > 0 && (
-								<Link
-									href={
-										"https://github.com/" +
-										user.registrationData.GitHub
-									}
-									className="mt-10 flex items-center gap-x-2 leading-none hover:underline"
-								>
-									<Github className="text-xl" />
-									{user.registrationData.GitHub}
-								</Link>
-							)}
-						{user.registrationData.LinkedIn &&
-							user.registrationData.LinkedIn.length > 0 && (
-								<Link
-									href={
-										"https://linkedin.com/in/" +
-										user.registrationData.LinkedIn
-									}
-									className="mt-3 flex items-center gap-x-2 leading-none hover:underline"
-								>
-									<Linkedin className="text-xl" />
-									{user.registrationData.LinkedIn}
-								</Link>
-							)}
-						{user.registrationData.PersonalWebsite &&
-							user.registrationData.PersonalWebsite.length >
-								0 && (
-								<Link
-									href={
-										user.registrationData.PersonalWebsite.startsWith(
-											"http",
-										) ||
-										user.registrationData.PersonalWebsite.startsWith(
-											"https",
-										)
-											? user.registrationData
-													.PersonalWebsite
-											: "https://" +
-												user.registrationData
-													.PersonalWebsite
-									}
-									className="mt-3 flex items-center gap-x-2 leading-none hover:underline"
-								>
-									<Globe className="text-xl" />
-									{user.registrationData.PersonalWebsite.replace(
-										"https://",
-										"",
-									).replace("http://", "")}
-								</Link>
-							)}
+						<div className="flex flex-row justify-center gap-x-2 max-sm:items-center sm:flex-col">
+							{user.registrationData.GitHub &&
+								user.registrationData.GitHub.length > 0 && (
+									<Link
+										href={
+											"https://github.com/" +
+											user.registrationData.GitHub
+										}
+										className="mt-3 flex items-center justify-center gap-x-2 leading-none hover:underline sm:mt-10"
+									>
+										<Github className="text-xl" />
+										<span className="max-sm:hidden">
+											{user.registrationData.GitHub}
+										</span>
+									</Link>
+								)}
+							{user.registrationData.LinkedIn &&
+								user.registrationData.LinkedIn.length > 0 && (
+									<Link
+										href={
+											"https://linkedin.com/in/" +
+											user.registrationData.LinkedIn
+										}
+										className="mt-3 flex items-center justify-center gap-x-2 leading-none hover:underline"
+									>
+										<Linkedin className="text-xl" />
+										<span className="max-sm:hidden">
+											{user.registrationData.LinkedIn}
+										</span>
+									</Link>
+								)}
+							{user.registrationData.PersonalWebsite &&
+								user.registrationData.PersonalWebsite.length >
+									0 && (
+									<Link
+										href={
+											user.registrationData.PersonalWebsite.startsWith(
+												"http",
+											) ||
+											user.registrationData.PersonalWebsite.startsWith(
+												"https",
+											)
+												? user.registrationData
+														.PersonalWebsite
+												: "https://" +
+													user.registrationData
+														.PersonalWebsite
+										}
+										className="mt-3 flex items-center justify-center gap-x-2 leading-none hover:underline"
+									>
+										<Globe className="text-xl" />
+										<span className="max-sm:hidden">
+											{user.registrationData.PersonalWebsite.replace(
+												"https://",
+												"",
+											).replace("http://", "")}
+										</span>
+									</Link>
+								)}
+						</div>
 					</div>
 					<div className="col-span-4 flex flex-col justify-center pl-5">
 						<h3 className="font-bold">About</h3>
