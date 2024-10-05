@@ -22,27 +22,14 @@ import Link from "next/link";
 import { useRouter, usePathname, useSearchParams } from "next/navigation";
 import { toast } from "sonner";
 
-/*
-
-Pass Scanner Props:
-
-eventName: name of the event that the user is scanning into
-hasScanned: if the state has eventered one in which a QR has been scanned (whether that scan has scanned before or not)
-scan: the scan object that has been scanned. If they have not scanned before scan will be null leading to a new record or if they have then it will incriment the scan count.
-
-*/
-
 interface CheckinScannerProps {
-	// event: eventType;
 	hasScanned: boolean;
-	// scan: scansType | null;
 	checkedIn: boolean | null;
 	scanUser: userType | null;
 	hasRSVP: boolean | null;
 }
 
 export default function CheckinScanner({
-	// event,
 	hasScanned,
 	checkedIn,
 	scanUser,
@@ -56,6 +43,10 @@ export default function CheckinScanner({
 			setScanLoading(false);
 		}
 	}, [hasScanned]);
+
+	useEffect(() => {
+		setProceed((prev) => prev || hasRSVP);
+	}, [hasRSVP]);
 
 	const searchParams = useSearchParams();
 	const path = usePathname();
@@ -113,11 +104,6 @@ export default function CheckinScanner({
 							}}
 						/>
 					</div>
-					{/* <div className="w-screen max-w-[500px] flex justify-center gap-x-2 overflow-hidden mx-auto">
-            <Link href={"/admin/events"}>
-              <Button>Return To Events</Button>
-            </Link>
-          </div> */}
 				</div>
 			</div>
 			<Drawer
