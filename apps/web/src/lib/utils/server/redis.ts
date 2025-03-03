@@ -1,15 +1,17 @@
-import { kv } from "@vercel/kv";
 import type { NavItemToggleType } from "@/validators/shared/navitemtoggle";
+import { Redis } from "@upstash/redis";
+
+const redis = Redis.fromEnv();
 
 export async function getAllNavItems() {
-	const keys = await kv.smembers<string[]>("config:navitemslist");
+	const keys = await redis.smembers<string[]>("config:navitemslist");
 	if (!keys || keys.length < 1) {
 		return {
 			keys: [],
 			items: [],
 		};
 	}
-	const pipe = kv.pipeline();
+	const pipe = redis.pipeline();
 	for (const key of keys) {
 		pipe.hgetall(`config:navitems:${key}`);
 	}

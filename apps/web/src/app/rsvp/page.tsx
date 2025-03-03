@@ -7,11 +7,14 @@ import { eq } from "db/drizzle";
 import { users } from "db/schema";
 import ClientToast from "@/components/shared/ClientToast";
 import { SignedOut, RedirectToSignIn } from "@clerk/nextjs";
-import { kv } from "@vercel/kv";
 import { parseRedisBoolean } from "@/lib/utils/server/redis";
 import Link from "next/link";
 import { Button } from "@/components/shadcn/ui/button";
 import { CheckCircleIcon } from "lucide-react";
+
+import { Redis } from "@upstash/redis";
+
+const redis = Redis.fromEnv();
 
 export default async function RsvpPage({
 	searchParams,
@@ -45,7 +48,7 @@ export default async function RsvpPage({
 		return redirect("/i/approval");
 	}
 
-	const rsvpEnabled = await kv.get("config:registration:allowRSVPs");
+	const rsvpEnabled = await redis.get("config:registration:allowRSVPs");
 
 	// TODO: fix type jank here
 	if (

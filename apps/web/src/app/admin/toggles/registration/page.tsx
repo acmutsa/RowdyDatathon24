@@ -1,9 +1,12 @@
 import { RegistrationToggles } from "@/components/admin/toggles/RegistrationSettings";
-import { kv } from "@vercel/kv";
 import { parseRedisBoolean } from "@/lib/utils/server/redis";
 
+import { Redis } from "@upstash/redis";
+
+const redis = Redis.fromEnv();
+
 export default async function Page() {
-	const pipe = kv.pipeline();
+	const pipe = redis.pipeline();
 	pipe.get("config:registration:registrationEnabled");
 	pipe.get("config:registration:secretRegistrationEnabled");
 	// const result = await pipe.exec();
@@ -12,7 +15,7 @@ export default async function Page() {
 		defaultRegistrationEnabled,
 		defaultSecretRegistrationEnabled,
 		defaultRSVPsEnabled,
-	]: (string | null)[] = await kv.mget(
+	]: (string | null)[] = await redis.mget(
 		"config:registration:registrationEnabled",
 		"config:registration:secretRegistrationEnabled",
 		"config:registration:allowRSVPs",

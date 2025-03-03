@@ -2,8 +2,11 @@
 
 import { z } from "zod";
 import { adminAction } from "@/lib/safe-action";
-import { kv } from "@vercel/kv";
 import { revalidatePath } from "next/cache";
+
+import { Redis } from "@upstash/redis";
+
+const redis = Redis.fromEnv();
 
 const metadataSchema = z.object({
 	name: z.string().min(1),
@@ -16,8 +19,8 @@ const navAdminPage = "/admin/toggles/landing";
 export const setItem = adminAction(
 	metadataSchema,
 	async ({ name, url }, { user, userId }) => {
-		await kv.sadd("config:navitemslist", encodeURIComponent(name));
-		await kv.hset(`config:navitems:${encodeURIComponent(name)}`, {
+		await redis.sadd("config:navitemslist", encodeURIComponent(name));
+		await redis.hset(`config:navitems:${encodeURIComponent(name)}`, {
 			url,
 			name,
 			enabled: true,
@@ -30,7 +33,7 @@ export const setItem = adminAction(
 export const removeItem = adminAction(
 	z.string(),
 	async (name, { user, userId }) => {
-		const pipe = kv.pipeline();
+		const pipe = redis.pipeline();
 		pipe.srem("config:navitemslist", encodeURIComponent(name));
 		pipe.del(`config:navitems:${encodeURIComponent(name)}`);
 		await pipe.exec();
@@ -43,7 +46,7 @@ export const removeItem = adminAction(
 export const toggleItem = adminAction(
 	z.object({ name: z.string(), statusToSet: z.boolean() }),
 	async ({ name, statusToSet }, { user, userId }) => {
-		await kv.hset(`config:navitems:${encodeURIComponent(name)}`, {
+		await redis.hset(`config:navitems:${encodeURIComponent(name)}`, {
 			enabled: statusToSet,
 		});
 		revalidatePath(navAdminPage);

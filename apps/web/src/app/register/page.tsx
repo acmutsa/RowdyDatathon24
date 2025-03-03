@@ -7,9 +7,12 @@ import { eq } from "db/drizzle";
 import { redirect } from "next/navigation";
 import Navbar from "@/components/shared/Navbar";
 import Link from "next/link";
-import { kv } from "@vercel/kv";
 import { parseRedisBoolean } from "@/lib/utils/server/redis";
 import { Button } from "@/components/shadcn/ui/button";
+
+import { Redis } from "@upstash/redis";
+
+const redis = Redis.fromEnv();
 
 export default async function Page() {
 	const { userId } = auth();
@@ -31,7 +34,7 @@ export default async function Page() {
 	const [defaultRegistrationEnabled, defaultSecretRegistrationEnabled]: (
 		| string
 		| null
-	)[] = await kv.mget(
+	)[] = await redis.mget(
 		"config:registration:registrationEnabled",
 		"config:registration:secretRegistrationEnabled",
 	);

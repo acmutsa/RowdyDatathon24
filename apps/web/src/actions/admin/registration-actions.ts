@@ -2,8 +2,12 @@
 
 import { z } from "zod";
 import { adminAction } from "@/lib/safe-action";
-import { kv } from "@vercel/kv";
 import { revalidatePath } from "next/cache";
+
+import { Redis } from "@upstash/redis";
+
+const redis = Redis.fromEnv();
+
 
 const defaultRegistrationToggleSchema = z.object({
 	enabled: z.boolean(),
@@ -12,7 +16,7 @@ const defaultRegistrationToggleSchema = z.object({
 export const toggleRegistrationEnabled = adminAction(
 	defaultRegistrationToggleSchema,
 	async ({ enabled }, { user, userId }) => {
-		await kv.set("config:registration:registrationEnabled", enabled);
+		await redis.set("config:registration:registrationEnabled", enabled);
 		revalidatePath("/admin/toggles/registration");
 		return { success: true, statusSet: enabled };
 	},
@@ -21,7 +25,7 @@ export const toggleRegistrationEnabled = adminAction(
 export const toggleRegistrationMessageEnabled = adminAction(
 	defaultRegistrationToggleSchema,
 	async ({ enabled }, { user, userId }) => {
-		await kv.set("config:registration:registrationMessageEnabled", enabled);
+		await redis.set("config:registration:registrationMessageEnabled", enabled);
 		revalidatePath("/admin/toggles/registration");
 		return { success: true, statusSet: enabled };
 	},
@@ -30,7 +34,7 @@ export const toggleRegistrationMessageEnabled = adminAction(
 export const toggleSecretRegistrationEnabled = adminAction(
 	defaultRegistrationToggleSchema,
 	async ({ enabled }, { user, userId }) => {
-		await kv.set("config:registration:secretRegistrationEnabled", enabled);
+		await redis.set("config:registration:secretRegistrationEnabled", enabled);
 		revalidatePath("/admin/toggles/registration");
 		return { success: true, statusSet: enabled };
 	},
@@ -39,7 +43,7 @@ export const toggleSecretRegistrationEnabled = adminAction(
 export const toggleRSVPs = adminAction(
 	defaultRegistrationToggleSchema,
 	async ({ enabled }, { user, userId }) => {
-		await kv.set("config:registration:allowRSVPs", enabled);
+		await redis.set("config:registration:allowRSVPs", enabled);
 		revalidatePath("/admin/toggles/registration");
 		return { success: true, statusSet: enabled };
 	},
