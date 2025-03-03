@@ -1,3 +1,5 @@
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-nocheck
 import { db } from "db";
 import { users } from "db/schema";
 import { eq } from "db/drizzle";

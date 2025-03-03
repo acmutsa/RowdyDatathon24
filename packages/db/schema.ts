@@ -35,6 +35,9 @@ export const users = sqliteTable("users", {
 		.notNull()
 		.default(false),
 	rsvp: integer("rsvp", { mode: "boolean" }).notNull().default(false),
+	approved: integer("is_approved", { mode: "boolean" })
+		.notNull()
+		.default(false),
 });
 
 export const userRelations = relations(users, ({ one, many }) => ({
