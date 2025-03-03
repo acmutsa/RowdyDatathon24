@@ -37,7 +37,11 @@
         "POSTGRES_URL",
         "POSTGRES_URL_NON_POOLING",
         "POSTGRES_URL_NO_SSL",
-        "POSTGRES_USER"
+        "POSTGRES_USER",
+        "TURSO_AUTH_TOKEN",
+        "TURSO_DATABASE_URL",
+        "UPSTASH_REDIS_REST_TOKEN",
+        "UPSTASH_REDIS_REST_URL"
       ],
 	"tasks": {
 		"build": {
