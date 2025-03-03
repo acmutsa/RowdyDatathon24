@@ -3,7 +3,7 @@ import {
 	eventInsertType,
 	getAllEventsOptions,
 } from "../../../apps/web/src/lib/types/events";
-import { events } from "../schema";
+import { events } from "../schema-postgres";
 
 export function createNewEvent(event: eventInsertType) {
 	return db

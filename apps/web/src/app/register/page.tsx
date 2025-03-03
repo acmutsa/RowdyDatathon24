@@ -77,10 +77,10 @@ export default async function Page() {
 				Registration
 			</h1>
 			<div className="relative z-10 flex aspect-video w-full max-w-[500px] flex-col items-center justify-center gap-y-4 rounded-xl bg-white px-5 py-4 backdrop-blur transition dark:bg-white/[0.08]">
-				<h2 className="text-center text-2xl font-black">
+				<h2 className="text-center text-2xl font-black text-muted">
 					Registration Is Currently Closed
 				</h2>
-				<p className="text-center font-bold">
+				<p className="text-center font-bold text-muted">
 					If you believe this is a mistake or have any questions, feel
 					free to reach out to us at {c.issueEmail}!
 				</p>
