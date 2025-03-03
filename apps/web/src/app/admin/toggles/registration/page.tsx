@@ -7,8 +7,8 @@ const redis = Redis.fromEnv();
 
 export default async function Page() {
 	const pipe = redis.pipeline();
-	pipe.get("config:registration:registrationEnabled");
-	pipe.get("config:registration:secretRegistrationEnabled");
+	pipe.get("rowdydatathon_24_config:registration:registrationEnabled");
+	pipe.get("rowdydatathon_24_config:registration:secretRegistrationEnabled");
 	// const result = await pipe.exec();
 
 	const [
@@ -16,9 +16,9 @@ export default async function Page() {
 		defaultSecretRegistrationEnabled,
 		defaultRSVPsEnabled,
 	]: (string | null)[] = await redis.mget(
-		"config:registration:registrationEnabled",
-		"config:registration:secretRegistrationEnabled",
-		"config:registration:allowRSVPs",
+		"rowdydatathon_24_config:registration:registrationEnabled",
+		"rowdydatathon_24_config:registration:secretRegistrationEnabled",
+		"rowdydatathon_24_config:registration:allowRSVPs",
 	);
 
 	return (

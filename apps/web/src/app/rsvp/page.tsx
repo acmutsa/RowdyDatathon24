@@ -48,7 +48,9 @@ export default async function RsvpPage({
 		return redirect("/i/approval");
 	}
 
-	const rsvpEnabled = await redis.get("config:registration:allowRSVPs");
+	const rsvpEnabled = await redis.get(
+		"rowdydatathon_24_config:registration:allowRSVPs",
+	);
 
 	// TODO: fix type jank here
 	if (

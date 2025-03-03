@@ -19,12 +19,15 @@ const navAdminPage = "/admin/toggles/landing";
 export const setItem = adminAction(
 	metadataSchema,
 	async ({ name, url }, { user, userId }) => {
-		await redis.sadd("config:navitemslist", encodeURIComponent(name));
-		await redis.hset(`config:navitems:${encodeURIComponent(name)}`, {
-			url,
-			name,
-			enabled: true,
-		});
+		await redis.sadd("rowdydatathon_24_config:navitemslist", encodeURIComponent(name));
+		await redis.hset(
+			`rowdydatathon_24_config:navitems:${encodeURIComponent(name)}`,
+			{
+				url,
+				name,
+				enabled: true,
+			},
+		);
 		revalidatePath(navAdminPage);
 		return { success: true };
 	},
@@ -34,8 +37,13 @@ export const removeItem = adminAction(
 	z.string(),
 	async (name, { user, userId }) => {
 		const pipe = redis.pipeline();
-		pipe.srem("config:navitemslist", encodeURIComponent(name));
-		pipe.del(`config:navitems:${encodeURIComponent(name)}`);
+		pipe.srem(
+			"rowdydatathon_24_config:navitemslist",
+			encodeURIComponent(name),
+		);
+		pipe.del(
+			`rowdydatathon_24_config:navitems:${encodeURIComponent(name)}`,
+		);
 		await pipe.exec();
 		// await new Promise((resolve) => setTimeout(resolve, 1500));
 		revalidatePath(navAdminPage);
@@ -46,9 +54,12 @@ export const removeItem = adminAction(
 export const toggleItem = adminAction(
 	z.object({ name: z.string(), statusToSet: z.boolean() }),
 	async ({ name, statusToSet }, { user, userId }) => {
-		await redis.hset(`config:navitems:${encodeURIComponent(name)}`, {
-			enabled: statusToSet,
-		});
+		await redis.hset(
+			`rowdydatathon_24_config:navitems:${encodeURIComponent(name)}`,
+			{
+				enabled: statusToSet,
+			},
+		);
 		revalidatePath(navAdminPage);
 		return { success: true, itemStatus: statusToSet };
 	},

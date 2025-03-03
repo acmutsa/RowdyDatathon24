@@ -13,8 +13,8 @@ export default async function Page() {
 		| string
 		| null
 	)[] = await redis.mget(
-		"config:registration:registrationEnabled",
-		"config:registration:secretRegistrationEnabled",
+		"rowdydatathon_24_config:registration:registrationEnabled",
+		"rowdydatathon_24_config:registration:secretRegistrationEnabled",
 	);
 
 	if (parseRedisBoolean(defaultRegistrationEnabled, true) === true) {
