@@ -17,8 +17,6 @@
 -   Drizzle ORM
 -   Tailwind CSS
 
-[![Vercel](https://static.rowdyhacks.org/img/powered-by-vercel.svg)](https://vercel.com/?utm_source=ACM%20UTSA&utm_campaign=oss)
-
 ## Join The Team
 
 Want to help make Rowdy Datathon the best Hackathon around? Please reach out to us at `team@rowdydatathon.org`!
