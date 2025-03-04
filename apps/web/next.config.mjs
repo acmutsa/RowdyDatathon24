@@ -8,6 +8,7 @@ jiti("./src/env");
 const nextConfig = {
 	swcMinify: true,
 	transpilePackages: ["db"],
+	unoptimized: true,
 	images: {
 		domains: [
 			"images.clerk.dev",
